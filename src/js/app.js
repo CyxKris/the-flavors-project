@@ -13,6 +13,15 @@ myApp.config(['$routeProvider', function ($routeProvider) {
     }).otherwise('/home');
 }]);
 
+// The controller for the overall website
+myApp.controller(
+    'mainCtrl',
+    ['$scope', function ($scope) {
+        
+    }]
+);
+
+// The controller for the home page
 myApp.controller(
     'homeCtrl',
     ['$scope', function ($scope) {
@@ -20,7 +29,7 @@ myApp.controller(
     }]
 );
 
-
+// The controller for the header
 myApp.controller(
     'headerCtrl',
     ['$scope', '$window', '$route', function ($scope, $window, $route) {
@@ -56,6 +65,7 @@ myApp.controller(
     }]
 );
 
+// The controller for the mobile navigation
 myApp.controller(
     'mobileCtrl',
     ['$scope', function ($scope) {
@@ -70,6 +80,7 @@ myApp.controller(
     }]
 );
 
+// The controller for the footer
 myApp.controller(
     'footerCtrl',
     ['$scope', '$http', function ($scope, $http) {
@@ -144,4 +155,15 @@ myApp.controller(
 
         getLocation();
     }]
+);
+
+
+myApp.directive(
+    'bottomNavigation',
+    function () {
+        return {
+            restrict: 'EA',
+            templateUrl: 'src/components/bottom-nav.html'
+        }
+    }
 );

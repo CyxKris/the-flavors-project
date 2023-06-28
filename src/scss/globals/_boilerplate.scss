@@ -1,0 +1,37 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    // font-families
+    --share-tech: 'Share Tech', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+
+    // Colors
+    --pink: #A02264;
+    --orange: #DE5C2C;
+    --orange-dark: #c84415;
+    --black1: #232121;
+    --black2: #1D2226;
+    --white: #D9D9D9;
+    --light-brown: #A17876;
+    --beige: #E4C2AB;
+
+    --pastel-blue: #B2B4CC;
+    --paster-orange: #F8AC67;
+    --pastel-beige1: #FAD6D1;
+    --pastel-beige2: #FFE4CC;
+}
+
+body {
+    background-color: var(--pastel-blue);
+    font-family: var(--share-tech);
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+

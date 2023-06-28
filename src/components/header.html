@@ -1,0 +1,41 @@
+<a
+  href=""
+  ng-show="mobileView"
+  id="menu-icon"
+  class="menu-icon"
+  ng-controller="mobileCtrl"
+  ng-click="toggleMenu()"
+>
+  <img src="src/images/menu.svg" alt="Menu Icon" />
+</a>
+
+<div id="mobile-nav" class="mobile-nav" ng-controller="mobileCtrl">
+  <ul>
+    <li  ng-click="toggleMenu()"><a href="#!home">Home</a></li>
+    <li  ng-click="toggleMenu()"><a href="#!products">Products</a></li>
+    <li  ng-click="toggleMenu()"><a href="">About</a></li>
+    <li  ng-click="toggleMenu()"><a href="">Gallery</a></li>
+  </ul>
+
+  <div class="close" ng-click="toggleMenu()">close</div>
+</div>
+
+<nav class="header-navigation" ng-show="mobileView != true">
+  <ul>
+    <li><a href="#!home">Home</a></li>
+    <li><a href="#!products">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Gallery</a></li>
+  </ul>
+</nav>
+
+<div id="logo" class="logo">
+  <a href="#!home"
+    ><img src="src/images/flavors-logo.svg" alt="Flavors Logo"
+  /></a>
+</div>
+
+<div class="header-icons">
+  <div class="counter">2</div>
+  <img class="cart" src="src/images/cart.svg" alt="Cart Icon" />
+</div>

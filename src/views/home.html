@@ -1,0 +1,19 @@
+<header id="header" ng-include="'src/components/header.html'" class="flex"></header>
+
+<main id="home" ng-controller="homeCtrl">
+  <section id="hero">
+    <h1 data-aos="fade-left">This is the hero section</h1>
+    <div class="block">
+      <img ng-src="{{imageSrc}}" />
+    </div>
+  </section>
+  
+  <section id="about">This is the about section</section>
+  <section id="best">This is the best section</section>
+  <section id="more">This is the more section</section>
+  <section id="news">This is the news section</section>
+</main>
+
+<article id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></article>
+
+<footer ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

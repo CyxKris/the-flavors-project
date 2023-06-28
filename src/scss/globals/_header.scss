@@ -1,0 +1,81 @@
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.6rem;
+
+    position: relative;
+
+    a {
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    nav {
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+
+            a {
+                color: var(--black1);
+
+                &:hover {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 80px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+
+        .counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            background-color: var(--black2);
+            color: var(--white);
+            font-size: 1rem;
+
+            cursor: pointer;
+        }
+
+        .cart {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+}

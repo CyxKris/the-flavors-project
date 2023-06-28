@@ -1,0 +1,30 @@
+
+
+
+// Writing breakpoints for our media queries
+// Apparently there's a sort of issue with 'rem' on certain browsers.
+
+// 700px, 900px, 1440px
+
+// $breakpoints-up: (
+//     "medium": 43.75em,
+//     "large": 56.25em,
+//     "xlarge": 90em
+// );
+
+
+$breakpoints: (
+    'small': 576px,
+    'medium': 768px,
+    'large': 992px,
+    'xlarge': 1200px,
+    'xxlarge': 1400px
+);
+
+// ?Creating the mixins
+
+@mixin breakpoint ($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content; // To load the styles in the mixin.
+    }
+}

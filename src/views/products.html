@@ -1,15 +1,29 @@
 <header id="header" ng-include="'src/components/header.html'" class="flex"></header>
 
-<main>
+<main id="products">
   <section id="hero">
     <h1>This is the hero section of the products page</h1>
   </section>
 
-  <section id="products">
-    
+  <section>
+    <section id="basic-seasoning" class="product basic">
+      <h2>This is the Basic seasoning section</h2>
+    </section>
+
+    <section id="blended-seasoning" class="product blended">
+      <h2>This is the Blended Seasoning section</h2>
+    </section>
+
+    <section id="ethnic-blends" class="product ethnic">
+      <h2>This is the Ethnic & International Blends section</h2>
+    </section>
+
+    <section id="unique-blends" class="product unique">
+      <h2>This is the Unique & Signature Blends section</h2>
+    </section>
   </section>
 </main>
 
-<article id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></article>
+<div id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></div>
 
 <footer ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

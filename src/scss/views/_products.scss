@@ -1,0 +1,29 @@
+
+#products {
+
+    // The hero section
+    #hero {
+        min-height: 100vh;
+        background-color: var(--pink);
+    }
+
+    section {
+
+        // The sections containing the products
+        .product {
+            min-height: 100vh;
+
+            &.basic {
+                background-color: var(--pastel-orange);
+            }
+
+            &.blended {
+                background-color: var(--beige);
+            }
+
+            &.ethnic {
+                background-color: var(--light-brown);
+            }
+        }
+    }
+}

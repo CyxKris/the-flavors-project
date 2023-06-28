@@ -1,0 +1,21 @@
+
+[
+    {
+        "page": "home",
+        "links": [
+            "About",
+            "Best",
+            "More",
+            "News"
+        ]
+    },
+    {
+        "page": "products",
+        "links": [
+            "Basic",
+            "Blended",
+            "Ethnic",
+            "Unique"
+        ]
+    }
+]

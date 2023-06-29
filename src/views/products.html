@@ -1,4 +1,4 @@
-<header id="header" ng-include="'src/components/header.html'" class="flex"></header>
+<header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
 <main id="products">
   <section id="hero">
@@ -6,25 +6,26 @@
   </section>
 
   <section>
-    <section id="basic-seasoning" class="product basic">
+    <section id="basic" class="product basic">
       <h2>This is the Basic seasoning section</h2>
     </section>
 
-    <section id="blended-seasoning" class="product blended">
+    <section id="blended" class="product blended">
       <h2>This is the Blended Seasoning section</h2>
     </section>
 
-    <section id="ethnic-blends" class="product ethnic">
+    <section id="ethnic" class="product ethnic">
       <h2>This is the Ethnic & International Blends section</h2>
     </section>
 
-    <section id="unique-blends" class="product unique">
+    <section id="unique" class="product unique">
       <h2>This is the Unique & Signature Blends section</h2>
     </section>
   </section>
 </main>
 
 <!-- <div id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></div> -->
-<div id="bottom-navigation" bottom-navigation></div>
+<!-- <div id="bottom-navigation" bottom-navigation page="{{$route.current.activePage}}" links=["Basic", "Blended", "Ethnic", "Unique"]></div> -->
+<div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="productLinks"></div>
 
 <footer ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

@@ -10,3 +10,16 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+
+// document.addEventListener('click', function (event) {
+//     if (event.target.classList.contains('smooth-scroll-anchor')) {
+//         event.preventDefault(); // Prevent default anchor tag behavior
+
+//         var target = event.target.getAttribute('href'); // Get the target element ID
+
+
+//         lenis.scrollTo(target);
+//     }
+// });
+

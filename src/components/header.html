@@ -9,23 +9,25 @@
   <img src="src/images/menu.svg" alt="Menu Icon" />
 </a>
 
+<!-- The mobile navigation -->
 <div id="mobile-nav" class="mobile-nav" ng-controller="mobileCtrl">
   <ul>
-    <li  ng-click="toggleMenu()"><a href="#!home">Home</a></li>
-    <li  ng-click="toggleMenu()"><a href="#!products">Products</a></li>
-    <li  ng-click="toggleMenu()"><a href="">About</a></li>
-    <li  ng-click="toggleMenu()"><a href="">Gallery</a></li>
+    <li  ng-click="toggleMenu()"><a href="#!home" ng-class="{'active-page': $route.current.activePage == 'home'}">Home</a></li>
+    <li  ng-click="toggleMenu()"><a href="#!products" ng-class="{'active-page': $route.current.activePage == 'products'}">Products</a></li>
+    <li  ng-click="toggleMenu()"><a href="" ng-class="{'active-page': $route.current.activePage == 'about'}">About</a></li>
+    <li  ng-click="toggleMenu()"><a href="" ng-class="{'active-page': $route.current.activePage == 'gallery'}">Gallery</a></li>
   </ul>
 
   <div class="close" ng-click="toggleMenu()">close</div>
 </div>
 
+<!-- The desktop navigation -->
 <nav class="header-navigation" ng-show="mobileView != true">
   <ul>
-    <li><a href="#!home">Home</a></li>
-    <li><a href="#!products">Products</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Gallery</a></li>
+    <li><a href="#!home" ng-class="{'active-page': $route.current.activePage == 'home'}">Home</a></li>
+    <li><a href="#!products" ng-class="{'active-page': $route.current.activePage == 'products'}">Products</a></li>
+    <li><a href="#!about" ng-class="{'active-page': $route.current.activePage == 'about'}">About</a></li>
+    <li><a href="#!gallery" ng-class="{'active-page': $route.current.activePage == 'gallery'}">Gallery</a></li>
   </ul>
 </nav>
 

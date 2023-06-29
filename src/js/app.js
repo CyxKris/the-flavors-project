@@ -1,27 +1,66 @@
 
 const myApp = angular.module("myApp", ["ngRoute"]);
 
+// ?The configuration for the website
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: './src/views/home.html',
-            controller: 'headerCtrl'
+            controller: 'headerCtrl',
+            activePage: 'home'
         })
         .when('/products', {
             templateUrl: './src/views/products.html',
-            controller: 'headerCtrl'
-    }).otherwise('/home');
+            controller: 'headerCtrl',
+            activePage: 'products'
+        })
+        .when('/about', {
+            templateUrl: './src/views/about.html',
+            controller: 'headerCtrl',
+            activePage: 'about'
+        })
+        .when('/gallery', {
+            templateUrl: './src/views/gallery.html',
+            controller: 'headerCtrl',
+            activePage: 'gallery'
+        })
+        .otherwise('/home');
 }]);
 
-// The controller for the overall website
+// ?The controller for the overall website
 myApp.controller(
     'mainCtrl',
     ['$scope', function ($scope) {
-        
+
+        $scope.homeLinks = ['about', 'best', 'more', 'news'];
+
+        $scope.productLinks = ['basic', 'blended', 'ethnic', 'unique'];
+
+        $scope.aboutLinks = ['intro', 'services', 'more'];
+
+        $scope.galleryLinks = ['people', 'spices', 'places'];
+
+        // function performSmoothScroll(target) {
+        //     lenis.scrollTo(target);
+        // }
+
+        // $scope.scrollToLink = function (link, page) {
+        //     var target = '#!' + page + '#' + link;
+        //     console.log(target);
+        //     console.log(typeof target);
+        //     // lenis.scrollTo(target);
+        //     performSmoothScroll(target);
+        // };
+
+        // $scope.scrollToHeader = function (page) {
+        //     var target = '#!' + page + '#header';
+        //     performSmoothScroll(target);
+        // };
+
     }]
 );
 
-// The controller for the home page
+// ?The controller for the home page
 myApp.controller(
     'homeCtrl',
     ['$scope', function ($scope) {
@@ -29,22 +68,22 @@ myApp.controller(
     }]
 );
 
-// The controller for the header
+// ?The controller for the header
 myApp.controller(
     'headerCtrl',
-    ['$scope', '$window', '$route', function ($scope, $window, $route) {
-        $scope.route = $route;
+    ['$scope', '$route', '$window', function ($scope, $route, $window) {
+        $scope.$route = $route;
 
         $scope.mobileView = false;
 
-        // Getting the device width
+        // *Getting the device width
         function getDeviceWidth () {
             $scope.deviceWidth = $window.innerWidth;
         }
         
         getDeviceWidth();
 
-        // Determining the device view
+        // *Determining the device view
         function getView() {
             if ($scope.deviceWidth <= 768) {
                 $scope.mobileView = true;
@@ -55,7 +94,7 @@ myApp.controller(
 
         getView();
 
-        // Watch for window resize events to update the width dynamically
+        // *Watch for window resize events to update the width dynamically
         angular.element($window).on('resize', function() {
             $scope.$apply(function () {
                 getDeviceWidth();
@@ -65,7 +104,7 @@ myApp.controller(
     }]
 );
 
-// The controller for the mobile navigation
+// ?The controller for the mobile navigation
 myApp.controller(
     'mobileCtrl',
     ['$scope', function ($scope) {
@@ -80,7 +119,28 @@ myApp.controller(
     }]
 );
 
-// The controller for the footer
+// ?The controller for the bottom navigation
+// myApp.controller(
+//     'bottomNavCtrl',
+//     ['$scope', '$http', function ($scope, $http) {
+
+//         // Getting the bottom navigation data
+//         $http.get('data/bottom-nav.json')
+//             .then(function (response) {
+//                 console.log("This is the response from the bottom navigation data");
+//                 console.log(response);
+//                 $scope.nav = response.data;
+//                 console.log($scope.nav);
+                
+                
+
+//                 $scope.homeLinks = $scope.nav[0].links;
+//                 console.log($scope.homeLinks);
+//             });
+//     }]
+// );
+
+// ?The controller for the footer
 myApp.controller(
     'footerCtrl',
     ['$scope', '$http', function ($scope, $http) {
@@ -157,13 +217,20 @@ myApp.controller(
     }]
 );
 
-
+// ?The bottom navigation directive
 myApp.directive(
     'bottomNavigation',
     function () {
         return {
             restrict: 'EA',
-            templateUrl: 'src/components/bottom-nav.html'
+            templateUrl: 'src/components/bottom-nav.html',
+            scope: {
+                page: '=',
+                links: '='
+            }
+            // link: function (scope, elem, attrs) {
+                
+            // }
         }
     }
 );

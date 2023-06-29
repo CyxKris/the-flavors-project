@@ -62,6 +62,16 @@
                 &:active {
                     border: 1px solid antiquewhite;
                 }
+
+                &#page {
+                    border: none;
+                    text-transform: uppercase;
+                    color: var(--pink);
+                }
+
+                a {
+                    text-transform: capitalize;
+                }
             }
         }
     }

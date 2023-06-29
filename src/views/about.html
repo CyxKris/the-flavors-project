@@ -1,0 +1,12 @@
+
+<header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
+
+<main id="about">
+  <section id="hero">
+    <h1>This is the hero section of the about page</h1>
+  </section>
+</main>
+
+<div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="aboutLinks"></div>
+
+<footer ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

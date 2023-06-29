@@ -1,25 +1,56 @@
 <header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
-<main id="products">
+<main id="products" ng-controller="productCtrl">
   <section id="hero">
-    <h1>This is the hero section of the products page</h1>
+    <h1>explore our products</h1>
   </section>
 
-  <section>
-    <section id="basic" class="product basic">
-      <h2>This is the Basic seasoning section</h2>
+  <section id="categories">
+    <section id="basic" class="category basic">
+      <h2 class="category__title">basic seasoning</h2>
+      <div class="category__description">
+        The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.
+      </div>
+
+      <div class="category__products">
+        <article class="product bundle">
+          <img src="src/images/products/basic-seasoning-box.webp" class="product__image"></img>
+
+          <div class="product__info">
+            <p class="name">basic seasoning bundle</p>
+
+            <div class="buttons">
+              <a href="">learn more</a>
+              <a href="">buy</a>
+            </div>
+          </div>
+        </article>
+        <article class="product single"></article>
+        <article class="product single"></article>
+        <article class="product single"></article>
+        <article class="product single"></article>
+      </div>
     </section>
 
-    <section id="blended" class="product blended">
-      <h2>This is the Blended Seasoning section</h2>
+    <section id="blended" class="category blended">
+      <h2 class="category__title">blended seasoning</h2>
+      <div class="category__description">
+        The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.
+      </div>
     </section>
 
-    <section id="ethnic" class="product ethnic">
-      <h2>This is the Ethnic & International Blends section</h2>
+    <section id="ethnic" class="category ethnic">
+      <h2 class="category__title">ethnic and international blends</h2>
+      <div class="category__description">
+        The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.
+      </div>
     </section>
 
-    <section id="unique" class="product unique">
-      <h2>This is the Unique & Signature Blends section</h2>
+    <section id="unique" class="category unique">
+      <h2 class="category__title">unique and signature blends</h2>
+      <div class="category__description">
+        The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.
+      </div>
     </section>
   </section>
 </main>

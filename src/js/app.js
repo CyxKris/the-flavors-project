@@ -68,6 +68,19 @@ myApp.controller(
     }]
 );
 
+// ?The controller for the product page
+myApp.controller(
+    'productCtrl',
+    ['$scope', '$http', function ($scope, $http) {
+
+        // *Getting the products data
+        $http.get('data/categories.json')
+            .then(function (response) {
+                console.log(response);
+            });
+    }]
+);
+
 // ?The controller for the header
 myApp.controller(
     'headerCtrl',

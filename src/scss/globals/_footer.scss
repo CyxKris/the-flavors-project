@@ -84,6 +84,9 @@ footer {
         nav {
             ul {
                 list-style: none;
+
+                margin-bottom: 0 !important;
+                padding-left: 0 !important;
     
                 li:not(:nth-child(1)) {
                     margin-top: 8px;
@@ -111,7 +114,7 @@ footer {
 
     .location {
         background-color: antiquewhite;
-        padding-block: 1rem;
+        // padding-block: 1rem;
         position: sticky;
         inset: auto 0 0 0;
 

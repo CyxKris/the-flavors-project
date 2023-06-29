@@ -2,10 +2,18 @@
     {
         "category": "Basic Seasoning",
         "description": "The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.",
-        "content": [
+        "images": [
+            "src/images/products/basic-seasoning-box.webp",
+            "src/images/products/basic-seasoning-first-two.webp",
+            "src/images/products/basic-seasonign-second-two.webp"
+        ],
+        "products": [
             {
                 "id": 1,
                 "name": "Pure Crystal Sea Salt",
+                "transparent_image": "src/images/products/singles/pure-crystal-transparent-light.png",
+                "webp_image": "src/images/products/singles/pure-crystal-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/pure-crystal-white-bg.jpg",
                 "price": 2500,
                 "origin": "Coastal regions",
                 "flavor_profile": "Clean and briny",
@@ -19,6 +27,9 @@
             {
                 "id": 2,
                 "name": "Exquisite Black Diamond Pepper",
+                "transparent_image": "src/images/products/singles/black-pepper-transparent-light.png",
+                "webp_image": "src/images/products/singles/black-pepper-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/black-pepper-white-bg.jpg",
                 "price": 3000,
                 "origin": "Southeast Asia",
                 "flavor_profile": "Bold and spicy",
@@ -32,6 +43,9 @@
             {
                 "id": 3,
                 "name": "Garlic Elixir Powder",
+                "transparent_image": "src/images/products/singles/garlic-elixir-transparent-light.png",
+                "webp_image": "src/images/products/singles/garlic-elixir-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/garlic-elixir-white-bg.jpg",
                 "price": 3200,
                 "origin": "Various regions",
                 "flavor_profile": "Robust and aromatic",
@@ -45,6 +59,9 @@
             {
                 "id": 4,
                 "name": "Smoky Paprika Fusion",
+                "transparent_image": "src/images/products/singles/smoky-paprika-transparent-light.png",
+                "webp_image": "src/images/products/singles/smoky-paprika-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/smoky-paprika-white-bg.jpg",
                 "price": 2800,
                 "origin": "Spain",
                 "flavor_profile": "Rich and smoky",
@@ -60,10 +77,18 @@
     {
         "category": "Blended Seasoning",
         "description": "The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.",
-        "content": [
+        "images": [
+            "src/images/products/blended-seasoning-box.webp",
+            "src/images/products/blended-seasoning-first-two.webp",
+            "src/images/products/blended-seasonign-second-two.webp"
+        ],
+        "products": [
             {
                 "id": 5,
                 "name": "Italian Symphony Medley",
+                "transparent_image": "src/images/products/singles/italian-symphony-transparent-light.png",
+                "webp_image": "src/images/products/singles/italian-symphony-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/italian-symphony-white-bg.jpg",
                 "price": 3400,
                 "origin": "Italy",
                 "flavor_profile": "Herbaceous and savory",
@@ -77,6 +102,9 @@
             {
                 "id": 6,
                 "name": "Cajun Opulence Blend",
+                "transparent_image": "src/images/products/singles/cajun-opulence-transparent-light.png",
+                "webp_image": "src/images/products/singles/cajun-opulence-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/cajun-opulence-white-bg.jpg",
                 "price": 3450,
                 "origin": "Louisiana, USA",
                 "flavor_profile": "Spicy and robust",
@@ -90,6 +118,9 @@
             {
                 "id": 7,
                 "name": "Tango Tango Taco Seasoning",
+                "transparent_image": "src/images/products/singles/tango-tango-transparent-light.png",
+                "webp_image": "src/images/products/singles/tango-tango-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/tango-tango-white-bg.jpg",
                 "price": 3400,
                 "origin": "Mexico",
                 "flavor_profile": "Zesty and tangy",
@@ -103,6 +134,9 @@
             {
                 "id": 8,
                 "name": "Sizzling Ember Barbecue Rub",
+                "transparent_image": "src/images/products/singles/sizzling-ember-transparent-light.png",
+                "webp_image": "src/images/products/singles/sizzling-ember-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/sizzling-ember-white-bg.jpg",
                 "price": 2800,
                 "origin": "Various regions",
                 "flavor_profile": "Smoky and savory",
@@ -118,10 +152,18 @@
     {
         "category": "Ethnic and International Flavors",
         "description": "The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.",
-        "content": [
+        "images": [
+            "src/images/products/ethnic-&-international-box.webp",
+            "src/images/products/ethnic-&-international-first-two.webp",
+            "src/images/products/ethnic-&-international-second-two.webp"
+        ],
+        "products": [
             {
                 "id": 9,
                 "name": "Mediterranean Serenade Herbs",
+                "transparent_image": "src/images/products/singles/mediterranean-transparent-light.png",
+                "webp_image": "src/images/products/singles/mediterranean-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/mediterranean-white-bg.jpg",
                 "price": 3500,
                 "origin": "Mediterranean region",
                 "flavor_profile": "Fresh and aromatic",
@@ -135,6 +177,9 @@
             {
                 "id": 10,
                 "name": "Savory Secrets of Asia",
+                "transparent_image": "src/images/products/singles/savory-secrets-transparent-light.png",
+                "webp_image": "src/images/products/singles/savory-secrets-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/savory-secrets-white-bg.jpg",
                 "price": 3500,
                 "origin": "Asia",
                 "flavor_profile": "Complex and umami",
@@ -148,6 +193,9 @@
             {
                 "id": 11,
                 "name": "Sultan's Delight Moroccan Spice Mix",
+                "transparent_image": "src/images/products/singles/sultan's-delight-transparent-light.png",
+                "webp_image": "src/images/products/singles/sultan's-delight-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/sultan's-delight-white-bg.jpg",
                 "price": 3900,
                 "origin": "Morocco",
                 "flavor_profile": "Warm and aromatic",
@@ -161,6 +209,9 @@
             {
                 "id": 12,
                 "name": "Harmony of Flavors Mexican Blend",
+                "transparent_image": "src/images/products/singles/harmony-of-flavors-transparent-light.png",
+                "webp_image": "src/images/products/singles/harmony-of-flavors-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/harmony-of-flavors-white-bg.jpg",
                 "price": 4000,
                 "origin": "Mexico",
                 "flavor_profile": "Bold and spicy",
@@ -176,10 +227,18 @@
     {
         "category": "Unique and Signature Blends",
         "description": "The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.",
-        "content": [
+        "images": [
+            "src/images/products/unique-&-signature-box.webp",
+            "src/images/products/unique-&-signature-first-two.webp",
+            "src/images/products/unique-&-signature-second-two.webp"
+        ],
+        "products": [
             {
                 "id": 13,
                 "name": "Flavor Fusion Magic",
+                "transparent_image": "src/images/products/singles/flavor-fusion-transparent-light.png",
+                "webp_image": "src/images/products/singles/flavor-fusion-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/flavor-fusion-white-bg.jpg",
                 "price": 2700,
                 "origin": "Artisan blend",
                 "flavor_profile": "Versatile and enchanting",
@@ -193,6 +252,9 @@
             {
                 "id": 14,
                 "name": "Divine Elixir Blend",
+                "transparent_image": "src/images/products/singles/divine-elixir-transparent-light.png",
+                "webp_image": "src/images/products/singles/divine-elixir-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/divine-elixir-white-bg.jpg",
                 "price": 2700,
                 "origin": "Handcrafted blend",
                 "flavor_profile": "Exquisite and harmonious",
@@ -206,6 +268,9 @@
             {
                 "id": 15,
                 "name": "Secret Symphony Seasoning",
+                "transparent_image": "src/images/products/singles/secret-symphony-transparent-light.png",
+                "webp_image": "src/images/products/singles/secret-symphony-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/secret-symphony-white-bg.jpg",
                 "price": 3000,
                 "origin": "Artisan blend",
                 "flavor_profile": "Complex and balanced",
@@ -219,6 +284,9 @@
             {
                 "id": 16,
                 "name": "Aromatic Bliss Infusion",
+                "transparent_image": "src/images/products/singles/aromatic-bliss-transparent-light.png",
+                "webp_image": "src/images/products/singles/aromatic-bliss-white-bg.webp",
+                "mozjpeg_image": "src/images/products/singles/aromatic-bliss-white-bg.jpg",
                 "price": 3000,
                 "origin": "Artisan blend",
                 "flavor_profile": "Aromatic and delightful",

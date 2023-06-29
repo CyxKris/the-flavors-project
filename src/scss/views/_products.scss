@@ -1,17 +1,106 @@
+@use "../utilities";
 
 #products {
 
     // The hero section
     #hero {
-        min-height: 100vh;
-        background-color: var(--pink);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-block: 6rem 4rem;
+
+        h1 {
+            font-size: 5rem;
+            line-height: 91.2%;
+            text-transform: lowercase;
+            max-width: 90%;
+            margin-inline: auto;
+
+            @include utilities.breakpoint(xsmall) {
+                font-size: 6rem;
+            }
+        }
     }
 
-    section {
+    #categories {
+
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
 
         // The sections containing the products
-        .product {
+        .category {
             min-height: 100vh;
+            border-radius: 1.25rem;
+            padding: 2rem 1rem;
+            
+            &__title {
+                text-align: center;
+                font-family: var(--montserrat);
+                font-size: 2.25rem;
+                font-weight: 800;
+                line-height: 86.7%;
+                text-transform: lowercase;
+            }
+
+            &__description {
+                font-size: 1.5rem;
+                line-height: 132.2%;
+                text-transform: uppercase;
+
+                width: 90%;
+                margin-block: 3rem;
+                margin-inline: auto;
+            }
+
+            &__products {
+
+                .product {
+                    background-color: var(--black1);
+                    border-radius: 1rem;
+
+                    &__image {
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+
+                    &__info {
+                        padding-block: 1rem;
+
+                        .name {
+                            font-size: 1.25rem;
+                            color: var(--white);
+                            text-transform: lowercase;
+                            text-align: center;
+                            font-family: var(--montserrat);
+                        }
+
+                        .buttons {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: .5rem;
+
+                            a {
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                font-size: 1.5rem;
+                                color: var(--black2);
+                                padding: .5rem 1rem;
+                                border-radius: .625rem;
+
+                                &:nth-child(1) {
+                                    background-color: var(--white);
+                                }
+
+                                &:nth-child(2) {
+                                    background-color: var(--orange);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             &.basic {
                 background-color: var(--pastel-orange);
@@ -23,6 +112,10 @@
 
             &.ethnic {
                 background-color: var(--light-brown);
+            }
+
+            &.unique {
+                background-color: var(--pink);
             }
         }
     }

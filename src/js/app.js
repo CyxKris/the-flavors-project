@@ -76,7 +76,8 @@ myApp.controller(
         // *Getting the products data
         $http.get('data/categories.json')
             .then(function (response) {
-                console.log(response);
+                console.log(response.data);
+                $scope.categories = response.data;
             });
     }]
 );
@@ -98,7 +99,8 @@ myApp.controller(
 
         // *Determining the device view
         function getView() {
-            if ($scope.deviceWidth <= 768) {
+            // previous: 768
+            if ($scope.deviceWidth <= 1024) {
                 $scope.mobileView = true;
             } else {
                 $scope.mobileView = false;
@@ -247,3 +249,4 @@ myApp.directive(
         }
     }
 );
+

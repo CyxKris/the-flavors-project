@@ -1,4 +1,5 @@
 
+@use '../utilities';
 
 #bottom-navigation {
     position: fixed;
@@ -6,6 +7,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
+
+    // max-width: 95%;
 
     transition: all .3s ease-in-out;
 
@@ -70,6 +73,12 @@
                     border: none;
                     text-transform: uppercase;
                     color: var(--pink);
+
+                    display: none;
+
+                    @include utilities.breakpoint (xsmall) {
+                        display: block;
+                    }
                 }
 
                 a {

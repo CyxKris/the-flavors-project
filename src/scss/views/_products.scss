@@ -19,6 +19,14 @@
             @include utilities.breakpoint(xsmall) {
                 font-size: 6rem;
             }
+
+            @include utilities.breakpoint(medium) {
+                font-size: 10rem;
+            }
+
+            @include utilities.breakpoint(large) {
+                font-size: 18rem;
+            }
         }
     }
 
@@ -32,7 +40,7 @@
         .category {
             min-height: 100vh;
             border-radius: 1.25rem;
-            padding: 2rem 1rem;
+            padding: 5.5rem 1rem 2rem;
             
             &__title {
                 text-align: center;
@@ -41,19 +49,100 @@
                 font-weight: 800;
                 line-height: 86.7%;
                 text-transform: lowercase;
+
+                @include utilities.breakpoint (medium) {
+                    font-size: 4rem;
+                }
             }
 
             &__description {
-                font-size: 1.5rem;
-                line-height: 132.2%;
+                font-size: 1.2rem;
+                line-height: 145%;
+                line-height: 1.6;
                 text-transform: uppercase;
 
-                width: 90%;
                 margin-block: 3rem;
-                margin-inline: auto;
+                // margin-inline: auto;
+
+                @include utilities.breakpoint (medium) {
+                    font-size: 1.5rem;
+                    max-width: 75%;
+                }
             }
 
             &__products {
+
+                @include utilities.breakpoint (medium) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include utilities.breakpoint (large) {
+                    gap: 1rem;
+                }
+
+                .bundle-container {
+
+                    @include utilities.breakpoint (medium) {
+                        grid-column: span 2;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        grid-column: span 1;
+                        grid-row: span 2;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        gap: 1rem;
+                        padding-bottom: 1rem;
+                    }
+
+                    .bundle {
+
+                        @include utilities.breakpoint (medium) {
+                            grid-column: span 2;
+                        }
+                    }
+
+                    .extra-info {
+                        background-color: var(--black1);
+                        color: var(--white);
+                        font-size: 2rem;
+                        font-family: var(--montserrat);
+                        text-transform: lowercase;
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        display: none;
+
+                        @include utilities.breakpoint (large) {
+                            display: block;
+                        }
+                    }
+                }
+
+                .singles {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 2.5rem;
+
+                    grid-column: span 2;
+
+                    margin-top: 2.5rem;
+
+                    @include utilities.breakpoint (medium) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        gap: 1rem;
+
+                        grid-column: span 1;
+
+                        margin-top: 0;
+                    }
+                }
 
                 .product {
                     background-color: var(--black1);
@@ -73,6 +162,25 @@
                             text-transform: lowercase;
                             text-align: center;
                             font-family: var(--montserrat);
+                            
+                            width: 90%;
+                            margin-inline: auto;
+                        }
+
+                        .rating {
+                            color: var(--white);
+                            text-align: center;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: .2rem;
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                object-fit: cover;
+                            }
                         }
 
                         .buttons {

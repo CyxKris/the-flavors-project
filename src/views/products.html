@@ -6,52 +6,50 @@
   </section>
 
   <section id="categories">
-    <section id="basic" class="category basic">
-      <h2 class="category__title">basic seasoning</h2>
-      <div class="category__description">
-        The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.
-      </div>
+
+    <section ng-repeat="category in categories" id="{{category.selector}}" class="category {{category.selector}}">
+
+      <h2 class="category__title" ng-bind="category.category"></h2>
+      <div class="category__description" ng-bind="category.description"></div>
 
       <div class="category__products">
-        <article class="product bundle">
-          <img src="src/images/products/basic-seasoning-box.webp" class="product__image"></img>
-
-          <div class="product__info">
-            <p class="name">basic seasoning bundle</p>
-
-            <div class="buttons">
-              <a href="">learn more</a>
-              <a href="">buy</a>
+        <div class="bundle-container">
+          <article class="product bundle">
+            <img ng-src="{{category.images[0]}}" class="product__image"></img>
+            <div class="product__info">
+              <p class="name">{{category.category}} bundle</p>
+              <div class="buttons">
+                <a href="">learn more</a>
+                <a href="">buy</a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="product single"></article>
-        <article class="product single"></article>
-        <article class="product single"></article>
-        <article class="product single"></article>
+          </article>
+
+          <article class="extra-info">
+            I promise that all of this is really <em>really</em> legitimate 😁.
+            If there ever was a time to be serious, that time is now. This all better be worth it. For real, though.
+          </article>
+        </div>
+
+        <div class="singles">
+          <article ng-repeat="product in category.products" class="product single">
+            <img ng-src="{{product.mozjpeg_image}}" alt="{{product.name}} Image" class="product__image"></img>
+            <div class="product__info">
+              <p class="name" ng-bind="product.name"></p>
+              <p class="rating">
+                <img src="src/images/star.svg" alt="rating">
+                {{product.rating}}
+              </p>
+              <div class="buttons">
+                <a href="">learn more</a>
+                <a href="">buy</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="blended" class="category blended">
-      <h2 class="category__title">blended seasoning</h2>
-      <div class="category__description">
-        The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.
-      </div>
-    </section>
-
-    <section id="ethnic" class="category ethnic">
-      <h2 class="category__title">ethnic and international blends</h2>
-      <div class="category__description">
-        The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.
-      </div>
-    </section>
-
-    <section id="unique" class="category unique">
-      <h2 class="category__title">unique and signature blends</h2>
-      <div class="category__description">
-        The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.
-      </div>
-    </section>
   </section>
 </main>
 

@@ -1,6 +1,7 @@
 [
     {
         "category": "Basic Seasoning",
+        "selector": "basic",
         "description": "The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.",
         "images": [
             "src/images/products/basic-seasoning-box.webp",
@@ -76,6 +77,7 @@
     },
     {
         "category": "Blended Seasoning",
+        "selector": "blended",
         "description": "The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.",
         "images": [
             "src/images/products/blended-seasoning-box.webp",
@@ -151,6 +153,7 @@
     },
     {
         "category": "Ethnic and International Flavors",
+        "selector": "ethnic",
         "description": "The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.",
         "images": [
             "src/images/products/ethnic-&-international-box.webp",
@@ -226,6 +229,7 @@
     },
     {
         "category": "Unique and Signature Blends",
+        "selector": "unique",
         "description": "The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.",
         "images": [
             "src/images/products/unique-&-signature-box.webp",

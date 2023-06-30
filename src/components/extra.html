@@ -1,0 +1,102 @@
+
+<section class="modal-body__content" ng-if="showModalId == '2'">
+  <div class="product-intro">
+    <div class="product__heading">
+      <h3 ng-bind="category.products[1].name"></h3>
+
+      <div class="price-rating">
+        <p ng-bind="category.products[1].price | currency: '₦'"></p>
+        <div>
+          <img src="src/images/star.svg" alt="Star">
+          <p ng-bind="category.products[1].rating"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product__image">
+      <img ng-src="{{category.products[1].mozjpeg_image}}" alt="{{category.products[1].name}} Image">
+
+      <div class="product-buttons">
+        <button>add a review</button>
+        <button>add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <div class="accordion accordion-flush" id="productInformation">
+      <!-- Description -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productDescription" aria-expanded="false" aria-controls="productDescription">
+            Description
+          </button>
+        </h2>
+        <div id="productDescription" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].description"></div>
+        </div>
+      </div>
+
+      <!-- Origin -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productOrigin" aria-expanded="false" aria-controls="productOrigin">
+            Origin
+          </button>
+        </h2>
+        <div id="productOrigin" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].origin"></div>
+        </div>
+      </div>
+
+      <!-- Health Benefits -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productBenefits" aria-expanded="false" aria-controls="productBenefits">
+            Health Benefits
+          </button>
+        </h2>
+        <div id="productBenefits" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].health_benefits"></div>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productIngredients" aria-expanded="false" aria-controls="productIngredients">
+            Ingredients
+          </button>
+        </h2>
+        <div id="productIngredients" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].ingredients"></div>
+        </div>
+      </div>
+
+      <!-- Flavor Profile -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productFlavor" aria-expanded="false" aria-controls="productFlavor">
+            Flavor Profile
+          </button>
+        </h2>
+        <div id="productFlavor" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].flavor_profile"></div>
+        </div>
+      </div>
+
+      <!-- Suggested Usage -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productUsage" aria-expanded="false" aria-controls="productUsage">
+            Suggested Usage
+          </button>
+        </h2>
+        <div id="productUsage" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+          <div class="accordion-body" ng-bind="category.products[1].suggested_usage"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

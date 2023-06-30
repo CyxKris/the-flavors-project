@@ -80,6 +80,18 @@ myApp.controller(
                 console.log("🚀 ~ file: app.js:83 ~ $scope.categories:", $scope.categories)
                 console.log("name");
             });
+        
+        $scope.pg = {};
+        
+        $scope.openModal = function (id) {
+            console.log("🚀 ~ file: app.js:87 ~ id:", id)
+            // this.identity = id;
+            // console.log("🚀 ~ file: app.js:87 ~ this.identity:", this.identity);
+            this.identity = id;
+            $scope.another = id;
+            console.log("🚀 ~ file: app.js:93 ~ $scope.another:", $scope.another)
+            console.log("🚀 ~ file: app.js:92 ~ this.identity:", this.identity)
+        };
     }]
 );
 

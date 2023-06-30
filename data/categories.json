@@ -6,7 +6,7 @@
         "images": [
             "src/images/products/basic-seasoning-box.webp",
             "src/images/products/basic-seasoning-first-two.webp",
-            "src/images/products/basic-seasonign-second-two.webp"
+            "src/images/products/basic-seasoning-second-two.webp"
         ],
         "products": [
             {
@@ -78,7 +78,7 @@
         "images": [
             "src/images/products/blended-seasoning-box.webp",
             "src/images/products/blended-seasoning-first-two.webp",
-            "src/images/products/blended-seasonign-second-two.webp"
+            "src/images/products/blended-seasoning-second-two.webp"
         ],
         "products": [
             {

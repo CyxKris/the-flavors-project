@@ -5,31 +5,44 @@
           <h5 class="modal-title">Product Page</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
+      <!-- The body of the modal -->
       <div class="modal-body" ng-repeat="category in categories | limitTo:1">
-          <section class="modal-body__content">
+          <!-- <section class="modal-body__content">
             <div class="product-intro">
               <div class="product__heading">
                 <h3 ng-bind="category.products[0].name"></h3>
 
+                <p>{{identity}}</p>
+                <p>{{another}}</p>
+              </div>
+            </div>
+          </section> -->
+
+          <section class="modal-body__content">
+            <div class="product-intro">
+              <div class="product__heading">
+                <h3 ng-bind="category.products[1].name"></h3>
+          
                 <div class="price-rating">
-                  <p ng-bind="category.products[0].price | currency: '₦'"></p>
+                  <p ng-bind="category.products[1].price | currency: '₦'"></p>
                   <div>
                     <img src="src/images/star.svg" alt="Star">
-                    <p ng-bind="category.products[0].rating"></p>
+                    <p ng-bind="category.products[1].rating"></p>
                   </div>
                 </div>
               </div>
-
+          
               <div class="product__image">
-                <img ng-src="{{category.products[0].mozjpeg_image}}" alt="{{category.products[0].name}} Image">
-
+                <img ng-src="{{category.products[1].mozjpeg_image}}" alt="{{category.products[1].name}} Image">
+          
                 <div class="product-buttons">
                   <button>add a review</button>
                   <button>add to cart</button>
                 </div>
               </div>
             </div>
-
+          
             <div class="product-info">
               <div class="accordion accordion-flush" id="productInformation">
                 <!-- Description -->
@@ -40,10 +53,10 @@
                     </button>
                   </h2>
                   <div id="productDescription" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].description"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].description"></div>
                   </div>
                 </div>
-
+          
                 <!-- Origin -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -52,10 +65,10 @@
                     </button>
                   </h2>
                   <div id="productOrigin" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].origin"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].origin"></div>
                   </div>
                 </div>
-
+          
                 <!-- Health Benefits -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -64,10 +77,10 @@
                     </button>
                   </h2>
                   <div id="productBenefits" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].health_benefits"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].health_benefits"></div>
                   </div>
                 </div>
-
+          
                 <!-- Ingredients -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -76,10 +89,10 @@
                     </button>
                   </h2>
                   <div id="productIngredients" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].ingredients"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].ingredients"></div>
                   </div>
                 </div>
-
+          
                 <!-- Flavor Profile -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -88,10 +101,10 @@
                     </button>
                   </h2>
                   <div id="productFlavor" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].flavor_profile"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].flavor_profile"></div>
                   </div>
                 </div>
-
+          
                 <!-- Suggested Usage -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -100,17 +113,19 @@
                     </button>
                   </h2>
                   <div id="productUsage" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                    <div class="accordion-body" ng-bind="category.products[0].suggested_usage"></div>
+                    <div class="accordion-body" ng-bind="category.products[1].suggested_usage"></div>
                   </div>
                 </div>
-
+          
               </div>
             </div>
           </section>
       </div>
+
+
       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
   </div>
 </div>

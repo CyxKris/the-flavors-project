@@ -33,6 +33,7 @@
     #categories {
 
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 4rem;
 
@@ -41,6 +42,7 @@
             min-height: 100vh;
             border-radius: 1.25rem;
             padding: 5.5rem 1rem 2rem;
+            margin-inline: 1.5rem;
             
             &__title {
                 text-align: center;

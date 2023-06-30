@@ -41,7 +41,7 @@
                 {{product.rating}}
               </p>
               <div class="buttons">
-                <a href="">learn more</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#productPage">learn more</a>
                 <a href="">buy</a>
               </div>
             </div>
@@ -52,6 +52,8 @@
 
   </section>
 </main>
+
+<div id="productPage" class="modal" ng-include="'src/components/product-modal.html'" ng-controller="productCtrl"></div>
 
 <!-- <div id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></div> -->
 <!-- <div id="bottom-navigation" bottom-navigation page="{{$route.current.activePage}}" links=["Basic", "Blended", "Ethnic", "Unique"]></div> -->

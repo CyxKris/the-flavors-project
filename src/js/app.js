@@ -76,8 +76,9 @@ myApp.controller(
         // *Getting the products data
         $http.get('data/categories.json')
             .then(function (response) {
-                console.log(response.data);
                 $scope.categories = response.data;
+                console.log("🚀 ~ file: app.js:83 ~ $scope.categories:", $scope.categories)
+                console.log("name");
             });
     }]
 );

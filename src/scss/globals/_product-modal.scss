@@ -1,0 +1,135 @@
+
+
+#productPage {
+
+    .modal-body {
+
+        &__content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            padding-block: 2rem 5rem;
+
+            .product-intro {
+
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+    
+                .product__heading {
+    
+                    border-block: 2px solid var(--black2);
+        
+                    h3 {
+                        font-size: 3.5rem;
+                        line-height: 1;
+                        font-family: var(--montserrat);
+                        text-transform: lowercase;
+                        margin-block: 1rem;
+                    }
+        
+                    .price-rating {
+                        display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        padding-block: 2rem;
+                        font-size: 1.5rem;
+        
+                        border-top: 2px solid var(--black2);
+        
+                        p {
+                            margin-bottom: 0;
+                        }
+        
+                        div {
+                            display: flex;
+                            
+                            img {
+                                width: 30px;
+                                height: 30px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+        
+        
+                .product__image {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+        
+                    img {
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+        
+                    .product-buttons {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+        
+                        button {
+        
+                            font-size: 1.5rem;
+                            color: var(--black2);
+                            padding: .5rem 1rem;
+                            border-radius: .625rem;
+                            border: none;
+        
+                            &:nth-child(1) {
+                                background-color: var(--white);
+                            }
+        
+                            &:nth-child(2) {
+                                background-color: var(--orange);
+                            }
+                        }
+                    }
+                }
+    
+            }
+
+            .product-info {
+
+                .accordion {
+
+                    --bs-accordion-btn-focus-border-color: var(--pink);
+                    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--pink-shadow);
+                    // --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+
+                    .accordion-item {
+
+                        button {
+                            &.accordion-button {
+                                text-transform: uppercase;
+                                font-size: 1.5rem;
+                                border-bottom: 2px solid var(--black2);
+    
+                                &:not(.collapsed) {
+                                    color: var(--pink);
+                                    background-color: var(--white);
+    
+                                    // Change the styles/colors below. They're styled in the .accordion class
+                                    // --bs-accordion-btn-focus-border-color
+                                    // --bs-accordion-btn-focus-box-shadow
+                                }
+                            }
+                        }
+    
+                        .accordion-body {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

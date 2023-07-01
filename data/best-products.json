@@ -1,0 +1,31 @@
+
+[
+    {
+        "image": "src/images/products/singles/cajun-opulence-transparent-light.png",
+        "blob": "src/images/blob1.svg",
+        "name": "Cajun Opulence Blend",
+        "rating": 4.8,
+        "link": "#/products#blended"
+    },
+    {
+        "image": "src/images/products/singles/black-pepper-transparent-light.png",
+        "blob": "src/images/blob2.svg",
+        "name": "Exquisite Black Diamond Pepper",
+        "rating": 4.8,
+        "link": "#/products#basic"
+    },
+    {
+        "image": "src/images/products/singles/harmony-of-flavors-transparent-light.png",
+        "blob": "src/images/blob3.svg",
+        "name": "Harmony of Flavors Mexican Blend",
+        "rating": 4.8,
+        "link": "#/products#ethnic"
+    },
+    {
+        "image": "src/images/products/singles/secret-symphony-transparent-light.png",
+        "blob": "src/images/blob4.svg",
+        "name": "Secret Symphony Seasoning",
+        "rating": 4.8,
+        "link": "#/products#unique"
+    }
+]

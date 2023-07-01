@@ -45,7 +45,7 @@ myApp.controller(
     'mainCtrl',
     ['$scope', function ($scope) {
 
-        $scope.homeLinks = ['about', 'best', 'more', 'news'];
+        $scope.homeLinks = ['about', 'more', 'best', 'news'];
 
         $scope.productLinks = ['basic', 'blended', 'ethnic', 'unique'];
 
@@ -76,8 +76,14 @@ myApp.controller(
 // ?The controller for the home page
 myApp.controller(
     'homeCtrl',
-    ['$scope', function ($scope) {
+    ['$scope', '$http', function ($scope, $http) {
         $scope.imageSrc = 'src/images/products/basic-seasoning-box.webp';
+
+        $http
+            .get('data/best-products.json')
+            .then(function (response) {
+                $scope.bestProducts = response.data;
+            });
     }]
 );
 
@@ -288,6 +294,24 @@ myApp.directive(
             // link: function (scope, elem, attrs) {
                 
             // }
+        }
+    }
+);
+
+// ?The best products directive
+myApp.directive(
+    'bestProduct',
+    function () {
+        return {
+            restrict: 'EA',
+            templateUrl: 'src/components/best-product.html',
+            scope: {
+                name: '=',
+                image: '=',
+                blob: '=',
+                rating: '=',
+                link: '='
+            }
         }
     }
 );

@@ -2,13 +2,36 @@
 
 <main id="home" ng-controller="homeCtrl">
   <section id="hero">
-    <h1 data-aos="fade-left">This is the hero section</h1>
-    <div class="block">
-      <img ng-src="{{imageSrc}}" />
-    </div>
+    <h1>the only spices you need.</h1>
+
+    <article class="slider" ng-include="'src/components/home-slider.html'"></article>
   </section>
   
-  <section id="about">This is the about section</section>
+  <section id="about">
+    <h2>Get to know more about us</h2>
+    <div class="achievements">
+      <div class="achievement">
+        <h3 class="achievement__heading">Award-winning Flavors</h3>
+        <div class="achievement__content">
+          Our commitment to excellence has been recognized with multiple awards and accolades in the culinary industry. We take pride in the recognition of our dedication to crafting exceptional spices that elevate the dining experience.
+        </div>
+      </div>
+
+      <div class="achievement">
+        <h3 class="achievement__heading">Trusted by Chefs and Home Cooks</h3>
+        <div class="achievement__content">
+          Flavors spices have gained the trust of renowned chefs and home cooks alike. Our products are preferred by culinary professionals for their quality, versatility, and ability to enhance flavors in a wide range of dishes.
+        </div>
+      </div>
+
+      <div class="achievement">
+        <h3 class="achievement__heading">Sustainable Sourcing Practices</h3>
+        <div class="achievement__content">
+          We are proud to have established sustainable sourcing practices that prioritize ethical considerations and support local farmers and suppliers. By choosing Flavors, you contribute to a more sustainable and responsible food ecosystem.
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="best">This is the best section</section>
   <section id="more">This is the more section</section>
   <section id="news">This is the news section</section>

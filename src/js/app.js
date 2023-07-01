@@ -2,7 +2,20 @@
 const myApp = angular.module("myApp", ["ngRoute"]);
 
 // ?The configuration for the website
-myApp.config(['$routeProvider', function ($routeProvider) {
+myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.hashPrefix('');
+
+    // if (window.history && window.history.pushState) {
+    //     $locationProvider.html5Mode({
+    //         enabled: true,
+    //         requireBase: true,
+    //         rewriteLinks: false
+    //     });
+    // }
+    // else {
+    //     $locationProvider.html5Mode(false);
+    // }
+
     $routeProvider
         .when('/home', {
             templateUrl: './src/views/home.html',
@@ -69,28 +82,44 @@ myApp.controller(
 );
 
 // ?The controller for the product page
+// myApp.controller(
+//     'productCtrl',
+//     ['$scope', '$http', function ($scope, $http) {
+
+//         Getting the products data
+//         $http.get('data/categories.json')
+//             .then(function (response) {
+//                 $scope.categories = response.data;
+//                 console.log($scope.categories[0].products);
+//             });
+        
+        
+//         $scope.openModal = function (id) {
+//             $scope.selectedItem = $scope.categories[0].products[id];
+//         };
+//     }]
+// );
+
 myApp.controller(
     'productCtrl',
     ['$scope', '$http', function ($scope, $http) {
 
-        // *Getting the products data
+        // Getting the products data
         $http.get('data/categories.json')
             .then(function (response) {
                 $scope.categories = response.data;
-                console.log("🚀 ~ file: app.js:83 ~ $scope.categories:", $scope.categories)
-                console.log("name");
+                this.elements = response.data;
+                console.log(this.elements[0].products[0]);
+                console.log(this.elements[0].products[0].name);
             });
         
-        $scope.pg = {};
         
         $scope.openModal = function (id) {
-            console.log("🚀 ~ file: app.js:87 ~ id:", id)
-            // this.identity = id;
-            // console.log("🚀 ~ file: app.js:87 ~ this.identity:", this.identity);
-            this.identity = id;
-            $scope.another = id;
-            console.log("🚀 ~ file: app.js:93 ~ $scope.another:", $scope.another)
-            console.log("🚀 ~ file: app.js:92 ~ this.identity:", this.identity)
+            console.log("🚀 ~ file: app.js:104 ~ id:", id)
+            console.log(typeof id);
+            $scope.selectedItem = this.elements[0].products[id];
+            console.log("🚀 ~ file: app.js:104 ~ this.selectedItem:", $scope.selectedItem)
+            // console.log("🚀 ~ file: app.js:104 ~ this.selectedItem:", this.selectedItem.name)
         };
     }]
 );

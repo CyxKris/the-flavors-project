@@ -57,10 +57,8 @@
             padding-left: 0 !important;
 
             li {
-                padding: 1rem .625rem;
                 color: #B2B4CC;
                 border: 1px solid #222427;
-                border-radius: .5rem;
                 cursor: pointer;
                 transition: border .3s ease-in-out;
 
@@ -83,6 +81,8 @@
 
                 a {
                     text-transform: capitalize;
+                    padding: 1rem .625rem;
+                    border-radius: .5rem;
                 }
             }
         }

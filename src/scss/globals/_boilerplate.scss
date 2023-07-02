@@ -39,6 +39,25 @@ html {
     scroll-behavior: smooth !important;
 }
 
+/* The marquee animation */
+@keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@-moz-keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@-webkit-keyframes marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 // Lenis Scroll
 // html.lenis {
 //     height: auto;

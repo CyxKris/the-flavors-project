@@ -28,6 +28,9 @@ header {
             display: flex;
             gap: 2rem;
 
+            margin-bottom: 0 !important;
+            padding-left: 0 !important;
+
             a {
                 color: var(--black1);
                 font-size: 1.3rem;

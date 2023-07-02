@@ -66,6 +66,54 @@
 
   <section id="testimonials">
     <h2>what people are saying about us.</h2>
+
+    <div id="testimonialContent" class="carousel slide carousel-dark">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- The main content -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="main-content">
+            <p class="review" ng-bind="testimonials[0].review"></p>
+
+            <p class="name" ng-bind="testimonials[0].name"></p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main-content">
+            <p class="review" ng-bind="testimonials[1].review"></p>
+            <p class="name" ng-bind="testimonials[1].name"></p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main-content">
+            <p class="review" ng-bind="testimonials[2].review"></p>
+            <p class="name" ng-bind="testimonials[2].name"></p>
+          </div>
+        </div>
+      </div>
+      <!-- The quote image -->
+      <img src="src/images/quote.svg" alt="Quote Marks" class="quote-image">
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialContent" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialContent" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </section>
 
   <section id="new-arrivals">
@@ -102,4 +150,4 @@
 
 <div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="homeLinks"></div>
 
-<footer ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>
+<footer id="footer" ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

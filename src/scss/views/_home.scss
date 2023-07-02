@@ -68,6 +68,7 @@
             font-family: var(--montserrat);
             line-height: .9;
             text-transform: lowercase;
+            margin-bottom: 4rem;
 
             @include utilities.breakpoint (xsmall) {
                 font-size: 4rem;
@@ -75,17 +76,14 @@
         }
 
         &#about {
-            background-color: #A17876;
+            background-color: var(--light-brown);
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
-
-            h2 {
-                margin-bottom: 4rem;
-            }
 
             .achievements {
                 display: flex;
                 flex-direction: column;
+                padding-inline: 3rem;
                 gap: 5rem;
 
 
@@ -94,6 +92,26 @@
                     border-radius: 1rem;
                     padding: 3rem 1rem;
                     position: relative;
+
+                    @include utilities.breakpoint (medium) {
+                        width: 85%;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        width: 70%;
+                    }
+
+                    &:nth-child(2) {
+                        text-align: right;
+                        align-self: end;
+
+                        .achievement__image {
+                            inset: -10px auto auto -10px;
+                            
+                        }
+                    }
+
+
 
                     &__heading {
                         text-decoration: underline;
@@ -122,10 +140,6 @@
         &#more{
             background-color: var(--pink);
 
-            h2 {
-                margin-bottom: 4rem;
-            }
-
             .more__content {
                 background-color: var(--white);
                 border-radius: 1rem;
@@ -151,10 +165,6 @@
 
         &#best{
             background-color: var(--pastel-beige2);
-
-            h2 {
-                margin-bottom: 4rem;
-            }
 
             .best__products {
 
@@ -214,6 +224,36 @@
         &#testimonials {
             background-color: var(--pastel-blue);
             min-height: 100vh;
+
+            #testimonialContent {
+                background-color: var(--white);
+                border-radius: 1.25rem;
+                padding: 3rem;
+
+                .carousel-inner {
+
+                    .main-content {
+                        .review {
+                            line-height: 1.6;
+                            text-transform: lowercase;
+                            font-size: 1.25rem;
+                            text-align: center;
+                        }
+
+                        .name {
+                            font-family: var(--montserrat);
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .quote-image {
+                    position: absolute;
+                    width: 60px;
+                    inset: 25px auto auto -10px;
+                }
+            }
         }
 
         &#new-arrivals {

@@ -84,6 +84,12 @@ myApp.controller(
             .then(function (response) {
                 $scope.bestProducts = response.data;
             });
+        
+        $http
+            .get('data/testimonials.json')
+            .then(function (response) {
+                $scope.testimonials = response.data;
+            });
     }]
 );
 

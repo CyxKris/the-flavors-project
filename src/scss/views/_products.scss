@@ -35,14 +35,23 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 4rem;
+        // gap: 4rem;
 
         // The sections containing the products
         .category {
             min-height: 100vh;
-            border-radius: 1.25rem;
             padding: 5.5rem 1rem 2rem;
-            margin-inline: 1.5rem;
+            // margin-inline: 1.5rem;
+
+            &:nth-child(1) {
+                border-top-left-radius: 1.25rem;
+                border-top-right-radius: 1.25rem;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 1.25rem;
+                border-bottom-right-radius: 1.25rem;
+            }
             
             &__title {
                 text-align: center;

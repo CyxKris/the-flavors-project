@@ -29,6 +29,7 @@
 body {
     background-color: var(--pastel-blue);
     font-family: var(--share-tech);
+    transition: all .3s ease;
 
     &.no-scroll {
         overflow: hidden;
@@ -37,6 +38,7 @@ body {
 
 html {
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 
 /* The marquee animation */

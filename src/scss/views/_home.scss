@@ -73,6 +73,15 @@
             @include utilities.breakpoint (xsmall) {
                 font-size: 4rem;
             }
+
+            @include utilities.breakpoint (medium) {
+                margin-bottom: 8rem;
+            }
+
+            @include utilities.breakpoint (large) {
+                font-size: 6rem;
+                max-width: 80%;
+            }
         }
 
         &#about {
@@ -83,8 +92,17 @@
             .achievements {
                 display: flex;
                 flex-direction: column;
-                padding-inline: 3rem;
                 gap: 5rem;
+
+                @include utilities.breakpoint (medium) {
+                    padding-inline: 3rem;
+                }
+
+                @include utilities.breakpoint (large) {
+                    padding-inline: 0;
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
 
 
                 .achievement {
@@ -102,8 +120,12 @@
                     }
 
                     &:nth-child(2) {
-                        text-align: right;
-                        align-self: end;
+                        
+
+                        @include utilities.breakpoint (medium) {
+                            text-align: right;
+                            align-self: end;
+                        }
 
                         .achievement__image {
                             inset: -10px auto auto -10px;
@@ -140,11 +162,28 @@
         &#more{
             background-color: var(--pink);
 
+            h2 {
+                text-align: center;
+
+                @include utilities.breakpoint (large) {
+                    max-width: 100%;
+                }
+            }
+
             .more__content {
                 background-color: var(--white);
                 border-radius: 1rem;
                 padding: 3rem 1rem;
                 position: relative;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
 
                 img {
                     width: 180px;
@@ -216,6 +255,33 @@
                         text-transform: uppercase;
                         position: relative;
                         z-index: 3;
+
+                        font-size: 1.125rem;
+
+                        @include utilities.breakpoint (medium) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &__rating {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        font-size: 1.125rem;
+
+                        @include utilities.breakpoint (medium) {
+                            font-size: 1.25rem;
+                        }
+
+                        img {
+                            width: 25px;
+                            object-fit: contain;
+
+                            @include utilities.breakpoint (medium) {
+                                width: 30px;
+                            }
+                        }
                     }
                 }
             }
@@ -223,12 +289,20 @@
 
         &#testimonials {
             background-color: var(--pastel-blue);
-            min-height: 100vh;
 
             #testimonialContent {
                 background-color: var(--white);
                 border-radius: 1.25rem;
                 padding: 3rem;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
 
                 .carousel-inner {
 
@@ -238,6 +312,10 @@
                             text-transform: lowercase;
                             font-size: 1.25rem;
                             text-align: center;
+
+                            @include utilities.breakpoint (large) {
+                                font-size: 1.5rem;
+                            }
                         }
 
                         .name {
@@ -252,6 +330,16 @@
                     position: absolute;
                     width: 60px;
                     inset: 25px auto auto -10px;
+
+                    @include utilities.breakpoint (medium) {
+                        width: 80px;
+                        inset: 5px auto auto -15px;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        width: 100px;
+                        inset: -15px auto auto -25px;
+                    }
                 }
             }
         }
@@ -266,10 +354,29 @@
             .new-arrivals {
                 display: flex;
                 flex-direction: column;
+                
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
 
                 &__content {
                     font-size: 1.25rem;
                     text-transform: uppercase;
+
+                    @include utilities.breakpoint (medium) {
+                        max-width: 75%;
+                        font-size: 1.5rem;
+                    }
+
+                    &:last-child {
+                        text-align: right;
+                        align-self: flex-end;
+                    }
                 }
 
                 &__image {
@@ -291,6 +398,13 @@
             border-bottom-right-radius: 1rem;
 
             text-align: center;
+
+            h2 {
+
+                @include utilities.breakpoint (large) {
+                    max-width: 100%;
+                }
+            }
 
             form {
                 margin-top: 6rem;
@@ -349,8 +463,29 @@
 
     #marquee {
         background-color: var(--black2);
+        background-image: url('../images/pattern.svg');
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
         color: var(--white);
-        font-size: 2rem;
-        padding: 3rem 1rem;
+        font-size: 2.25rem;
+        padding: 1.5rem 1rem;
+
+        @include utilities.breakpoint (medium) {
+            font-size: 3rem;
+            padding: 2rem 1rem;
+        }
+
+        .marquee__text {
+
+            margin-bottom: 0;
+            
+            @media (prefers-reduced-motion: no-preference) {
+                // transition: 1s ease;
+                -moz-animation: marquee 10s linear infinite;
+                -webkit-animation: marquee 10s linear infinite;
+                animation: marquee 10s linear infinite;
+            }
+        }
     }
 }

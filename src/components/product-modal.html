@@ -21,7 +21,21 @@
 
           <!-- <p ng-bind="category.category"></p> -->
 
-          <p>This is the selected product: {{selectedItem.name}}</p>
+          <p>This is the selected product: {{elements}}</p>
+          <input type="number" ng-model="a">
+          <input type="number" ng-model="b">
+          {{a + b}}
+
+          <p>This is the returned variable: {{returned}}</p>
+          <p>This is the returnedItem variable: {{returnedItem}}</p>
+
+          <div ng-class="'hidden' : checkValue()">
+            {{categories}}
+          </div>
+
+          <!-- <div ng-if="returnedItem == '0'">
+            {{categories}}
+          </div> -->
 
       </div>
 

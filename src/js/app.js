@@ -49,6 +49,25 @@ myApp.controller(
 
         $scope.productLinks = ['basic', 'blended', 'ethnic', 'unique'];
 
+        $scope.productLinks2 = [
+            {
+                'name': 'basic',
+                'url': '#basic'
+            },
+            {
+                'name': 'blended',
+                'url': '#!/products#blended'
+            },
+            {
+                'name': 'ethnic',
+                'url': '#/products#ethnic'
+            },
+            {
+                'name': 'unique',
+                'url': '#/products#unique'
+            }
+        ];
+
         $scope.aboutLinks = ['intro', 'services', 'more'];
 
         $scope.galleryLinks = ['people', 'spices', 'places'];
@@ -120,19 +139,42 @@ myApp.controller(
         $http.get('data/categories.json')
             .then(function (response) {
                 $scope.categories = response.data;
-                this.elements = response.data;
-                console.log(this.elements[0].products[0]);
-                console.log(this.elements[0].products[0].name);
+                console.log("🚀 ~ file: app.js:142 ~  $scope.categories:", $scope.categories);
+
+
+                $scope.openModal = function (id) {
+                    console.log("🚀 ~ file: app.js:104 ~ id:", id);
+                    console.log('');
+                    $scope.returnedItem = id;
+                    this.returned = id;
+                    console.log("🚀 ~ file: app.js:152 ~ this.returned:", this.returned)
+                    console.log('');
+                    console.log("🚀 ~ file: app.js:151 ~ $scope.returnedItem:", $scope.returnedItem)
+                    console.log('');
+                    console.log($scope.categories);
+
+                    return $scope.returnedItem;
+                };
+
+                $scope.checkValue = function () {
+                    console.log($scope.returnedItem);
+                    return true;
+                }
             });
         
         
-        $scope.openModal = function (id) {
-            console.log("🚀 ~ file: app.js:104 ~ id:", id)
-            console.log(typeof id);
-            $scope.selectedItem = this.elements[0].products[id];
-            console.log("🚀 ~ file: app.js:104 ~ this.selectedItem:", $scope.selectedItem)
-            // console.log("🚀 ~ file: app.js:104 ~ this.selectedItem:", this.selectedItem.name)
-        };
+        
+        // $scope.openModal = function (id) {
+        //     console.log("🚀 ~ file: app.js:104 ~ id:", id);
+        //     console.log('');
+        //     $scope.returnedItem = id;
+        //     this.returned = id;
+        //     console.log("🚀 ~ file: app.js:152 ~ this.returned:", this.returned)
+        //     console.log('');
+        //     console.log("🚀 ~ file: app.js:151 ~ $scope.returnedItem:", $scope.returnedItem)
+        //     console.log('');
+        //     console.log($scope.categories);
+        // };
     }]
 );
 

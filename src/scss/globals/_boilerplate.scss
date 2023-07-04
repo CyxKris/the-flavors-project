@@ -26,6 +26,11 @@
     --pastel-beige2: #FFE4CC;
 }
 
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--pastel-blue);
     font-family: var(--share-tech);
@@ -36,10 +41,11 @@ body {
     }
 }
 
-html {
-    scroll-behavior: smooth !important;
-    overflow-x: hidden;
+header, .footer__content {
+    max-width: 1600px;
+    margin-inline: auto;
 }
+
 
 /* The marquee animation */
 @keyframes marquee {

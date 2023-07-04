@@ -9,6 +9,9 @@
         align-items: center;
         margin-block: 6rem 4rem;
 
+        max-width: 1600px;
+        margin-inline: auto;
+
         h1 {
             font-size: 5rem;
             line-height: 91.2%;
@@ -43,6 +46,18 @@
             padding: 5.5rem 1rem 2rem;
             // margin-inline: 1.5rem;
 
+            @include utilities.breakpoint (medium) {
+                padding-inline: 1.5rem;
+            }
+
+            @include utilities.breakpoint (large) {
+                padding-inline: 2.5rem;
+            }
+
+            .category-main-content {
+                max-width: 1600px;
+            }
+
             &:nth-child(1) {
                 border-top-left-radius: 1.25rem;
                 border-top-right-radius: 1.25rem;
@@ -63,6 +78,9 @@
 
                 @include utilities.breakpoint (medium) {
                     font-size: 4rem;
+                    max-width: 80%;
+                    margin-inline: auto;
+                    margin-bottom: 6rem;
                 }
             }
 
@@ -78,6 +96,10 @@
                 @include utilities.breakpoint (medium) {
                     font-size: 1.5rem;
                     max-width: 75%;
+                }
+
+                @include utilities.breakpoint (large) {
+                    display: none;
                 }
             }
 
@@ -117,11 +139,12 @@
                         }
                     }
 
-                    .extra-info {
+                    .description {
                         background-color: var(--black1);
                         color: var(--white);
-                        font-size: 2rem;
-                        font-family: var(--montserrat);
+                        font-size: 1.75rem;
+                        line-height: 1.6;
+                        // font-family: var(--montserrat);
                         text-transform: lowercase;
                         border-radius: 1rem;
                         padding: 1rem;

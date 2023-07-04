@@ -9,45 +9,48 @@
 
     <section ng-repeat="category in categories" id="{{category.selector}}" class="category {{category.selector}}">
 
-      <h2 class="category__title" ng-bind="category.category"></h2>
-      <div class="category__description" ng-bind="category.description"></div>
+      <div class="category-main-content">
 
-      <div class="category__products">
-        <div class="bundle-container">
-          <article class="product bundle">
-            <img ng-src="{{category.images[0]}}" class="product__image"></img>
-            <div class="product__info">
-              <p class="name">{{category.category}} bundle</p>
-              <div class="buttons">
-                <a href="">learn more</a>
-                <a href="">buy</a>
+        <h2 class="category__title" ng-bind="category.category"></h2>
+
+        <div class="category__description" ng-bind="category.description"></div>
+
+        <div class="category__products">
+          <div class="bundle-container">
+            <article class="description" ng-bind="category.description"></article>
+            
+            <article class="product bundle">
+              <img ng-src="{{category.images[0]}}" class="product__image"></img>
+              <div class="product__info">
+                <p class="name">{{category.category}} bundle</p>
+                <div class="buttons">
+                  <a href="">learn more</a>
+                  <a href="">buy</a>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="extra-info">
-            I promise that all of this is really <em>really</em> legitimate 😁.
-            If there ever was a time to be serious, that time is now. This all better be worth it. For real, though.
-          </article>
+          <div class="singles">
+            <article ng-repeat="product in category.products" class="product single">
+              <img ng-src="{{product.mozjpeg_image}}" alt="{{product.name}} Image" class="product__image"></img>
+              <div class="product__info">
+                <p class="name" ng-bind="product.name"></p>
+                <p class="rating">
+                  <img src="src/images/star.svg" alt="rating">
+                  {{product.rating}}
+                </p>
+                <div class="buttons">
+                  <a href="" data-bs-toggle="modal" data-bs-target="#productPage" ng-click="openModal($index)">learn more</a>
+                  <a href="">buy</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="singles">
-          <article ng-repeat="product in category.products" class="product single">
-            <img ng-src="{{product.mozjpeg_image}}" alt="{{product.name}} Image" class="product__image"></img>
-            <div class="product__info">
-              <p class="name" ng-bind="product.name"></p>
-              <p class="rating">
-                <img src="src/images/star.svg" alt="rating">
-                {{product.rating}}
-              </p>
-              <div class="buttons">
-                <a href="" data-bs-toggle="modal" data-bs-target="#productPage" ng-click="openModal($index)">learn more</a>
-                <a href="">buy</a>
-              </div>
-            </div>
-          </article>
-        </div>
       </div>
+
     </section>
 
   </section>

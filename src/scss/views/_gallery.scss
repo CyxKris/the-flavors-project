@@ -1,0 +1,44 @@
+
+@use '../utilities';
+
+#gallery {
+
+    section {
+        // The hero section
+        &#hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-block: 6rem 4rem;
+
+            max-width: 1600px;
+            margin-inline: auto;
+
+            h1 {
+                font-size: 5rem;
+                line-height: 91.2%;
+                text-transform: lowercase;
+                max-width: 90%;
+                margin-inline: auto;
+
+                position: relative;
+
+                @include utilities.breakpoint(xsmall) {
+                    font-size: 6rem;
+                }
+
+                @include utilities.breakpoint(medium) {
+                    font-size: 10rem;
+                }
+
+                @include utilities.breakpoint(large) {
+                    font-size: 15rem;
+                }
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            padding: 6rem 1rem;
+        }
+    }
+}

@@ -128,8 +128,10 @@
                         }
 
                         .achievement__image {
-                            inset: -10px auto auto -10px;
                             
+                            @include utilities.breakpoint (large) {
+                                inset: -40px -20px auto auto;
+                            }
                         }
                     }
 
@@ -148,6 +150,10 @@
                         width: 110px;
                         position: absolute;
                         inset: -10px -10px auto auto;
+
+                        @include utilities.breakpoint (large) {
+                            inset: -30px auto auto -20px;
+                        }
                     }
 
                     &__content {

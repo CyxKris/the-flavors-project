@@ -1,0 +1,337 @@
+
+@use '../utilities';
+
+#about {
+
+    section {
+        // The hero section
+        &#hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-block: 6rem 4rem;
+
+            max-width: 1600px;
+            margin-inline: auto;
+
+            h1 {
+                font-size: 5rem;
+                line-height: 91.2%;
+                text-transform: lowercase;
+                max-width: 90%;
+                margin-inline: auto;
+
+                position: relative;
+
+                @include utilities.breakpoint(xsmall) {
+                    font-size: 6rem;
+                }
+
+                @include utilities.breakpoint(medium) {
+                    font-size: 10rem;
+                }
+
+                @include utilities.breakpoint(large) {
+                    font-size: 15rem;
+                }
+
+                img {
+                    display: none;
+                    width: 100px;
+                    position: absolute;
+                    inset: -10px 30px auto auto;
+
+                    @include utilities.breakpoint (xsmall) {
+                        display: block;
+                    }
+
+                    @include utilities.breakpoint (medium) {
+                        width: 180px;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        width: 230px;
+                        inset: 0 80px auto auto;
+                    }
+                }
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            padding: 6rem 1rem;
+        }
+
+        h2 {
+            font-size: 3.125rem;
+            font-family: var(--montserrat);
+            line-height: .9;
+            text-transform: lowercase;
+            margin-bottom: 4rem;
+
+            @include utilities.breakpoint (xsmall) {
+                font-size: 4rem;
+            }
+
+            @include utilities.breakpoint (medium) {
+                margin-bottom: 8rem;
+            }
+
+            @include utilities.breakpoint (large) {
+                font-size: 6rem;
+                max-width: 80%;
+            }
+        }
+
+        &#who {
+            background-color: var(--orange);
+            border-top-left-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+
+            .who__content {
+                display: flex;
+                flex-direction: column;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
+
+                .text {
+                    font-size: 1.5rem;
+                    position: relative;
+                    z-index: 2;
+
+                    @include utilities.breakpoint (medium) {
+                        max-width: 75%;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        font-size: 2rem;
+                    }
+
+                    &:last-child {
+                        
+                        @include utilities.breakpoint (medium) {
+                            text-align: right;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+
+                .image {
+                    width: 80%;
+                    margin: 2rem auto;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+
+                    @include utilities.breakpoint (medium) {
+                        margin-block: 3.5rem;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        margin-block: 5rem;
+                    }
+
+                    img {
+                        border-radius: 1rem;
+                        width: 60%;
+                        object-fit: cover;
+
+                        &:first-child {
+                            transform: rotate(-20deg);
+                        }
+
+                        &:nth-child(2) {
+                            transform: rotate(20deg) translate(-10px, -35px);
+
+                            @include utilities.breakpoint (medium) {
+                                max-height: 300px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        &#what {
+            background-color: var(--pink);
+
+            .what__content {
+                display: flex;
+                flex-direction: column;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
+
+                .text {
+                    font-size: 1.5rem;
+                    background-color: var(--white);
+                    border-radius: 1.25rem;
+                    padding: 1.5rem;
+
+                    @include utilities.breakpoint (medium) {
+                        max-width: 85%;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        font-size: 2rem;
+                    }
+
+                    &:last-child {
+                        
+                        @include utilities.breakpoint (medium) {
+                            text-align: right;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+    
+                .image {
+                    width: 90%;
+                    margin: 4rem auto;
+
+                    @include utilities.breakpoint (medium) {
+                        margin-block: 6rem;
+                    }
+    
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+
+        &#more {
+            background-color: var(--light-brown);
+            
+
+            .more__content {
+                display: flex;
+                flex-direction: column;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 90%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    max-width: 80%;
+                }
+
+                .text {
+                    font-size: 1.5rem;
+    
+                    @include utilities.breakpoint (medium) {
+                        max-width: 85%;
+                    }
+
+                    @include utilities.breakpoint (large) {
+                        font-size: 2rem;
+                    }
+    
+                    &:last-child {
+                        
+                        @include utilities.breakpoint (medium) {
+                            text-align: right;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+    
+                .image {
+                    width: 90%;
+                    margin: 4rem auto;
+
+                    @include utilities.breakpoint (medium) {
+                        margin-block: 6rem;
+                    }
+    
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+
+        &#join {
+            background-color: var(--orange);
+            border-bottom-left-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+
+            font-size: 1.5rem;
+
+            h3 {
+                font-family: var(--montserrat);
+                font-size: 2rem;
+
+                @include utilities.breakpoint (large) {
+                    font-size: 2.25rem;
+                }
+            }
+
+            .newsletter {
+
+                @include utilities.breakpoint (medium) {
+                    text-align: center;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    max-width: 85%;
+                    margin-inline: auto;
+                }
+
+                @include utilities.breakpoint (large) {
+                    font-size: 2.5rem;
+                }
+
+
+                a {
+                    color: var(--pink);
+                }
+            }
+
+            .contact {
+                margin-top: 3rem;
+
+                @include utilities.breakpoint (medium) {
+                    max-width: 85%;
+                    margin: 4rem auto;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                h3 {
+                    @include utilities.breakpoint (medium) {
+                        font-size: 2.5rem;
+                        text-align: center;
+                    }
+                }
+
+                div {
+                    text-transform: uppercase;
+
+                    @include utilities.breakpoint (medium) {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

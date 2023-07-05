@@ -135,46 +135,19 @@ myApp.controller(
     'productCtrl',
     ['$scope', '$http', function ($scope, $http) {
 
-        // Getting the products data
+        // Getting the categories data
         $http.get('data/categories.json')
             .then(function (response) {
                 $scope.categories = response.data;
-                console.log("🚀 ~ file: app.js:142 ~  $scope.categories:", $scope.categories);
-
-
-                $scope.openModal = function (id) {
-                    console.log("🚀 ~ file: app.js:104 ~ id:", id);
-                    console.log('');
-                    $scope.returnedItem = id;
-                    this.returned = id;
-                    console.log("🚀 ~ file: app.js:152 ~ this.returned:", this.returned)
-                    console.log('');
-                    console.log("🚀 ~ file: app.js:151 ~ $scope.returnedItem:", $scope.returnedItem)
-                    console.log('');
-                    console.log($scope.categories);
-
-                    return $scope.returnedItem;
-                };
-
-                $scope.checkValue = function () {
-                    console.log($scope.returnedItem);
-                    return true;
-                }
             });
         
+        // Getting the product data
+        $http
+            .get('/data/products.json')
+            .then(function (response) {
+                $scope.products = response.data;
+            });
         
-        
-        // $scope.openModal = function (id) {
-        //     console.log("🚀 ~ file: app.js:104 ~ id:", id);
-        //     console.log('');
-        //     $scope.returnedItem = id;
-        //     this.returned = id;
-        //     console.log("🚀 ~ file: app.js:152 ~ this.returned:", this.returned)
-        //     console.log('');
-        //     console.log("🚀 ~ file: app.js:151 ~ $scope.returnedItem:", $scope.returnedItem)
-        //     console.log('');
-        //     console.log($scope.categories);
-        // };
     }]
 );
 
@@ -214,6 +187,14 @@ myApp.controller(
         });
     }]
 );
+
+// ?The controller for the cart
+// myApp.controller(
+//     'cartCtrl',
+//     ['$scope', function ($scope) {
+//         $scope.message = 'This is the cart';
+//     }]
+// );
 
 // ?The controller for the mobile navigation
 myApp.controller(
@@ -359,6 +340,20 @@ myApp.directive(
                 blob: '=',
                 rating: '=',
                 link: '='
+            }
+        }
+    }
+);
+
+// ?The Products Modal directive
+myApp.directive(
+    'productsModal',
+    function () {
+        return {
+            restrict: 'EA',
+            templateUrl: '/src/components/product-modal.html',
+            scope: {
+                selectedItem: '='
             }
         }
     }

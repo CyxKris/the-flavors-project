@@ -1,9 +1,9 @@
 
 <!-- The Header -->
-<header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
+<header id="header" ng-include="'/src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
 <!-- The Cart -->
-<div ng-include="'src/components/cart.html'" class="offcanvas offcanvas-start" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false"></div>
+<div ng-include="'/src/components/cart.html'" class="offcanvas offcanvas-start" tabindex="-1" id="cart" aria-labelledby="cartLabel" ng-controller="productCtrl"></div>
 
 <!-- The Main Content of The Page -->
 <main id="products" ng-controller="productCtrl">
@@ -38,19 +38,73 @@
           </div>
 
           <div class="singles">
-            <article ng-repeat="product in category.products" class="product single">
-              <img ng-src="{{product.mozjpeg_image}}" alt="{{product.name}} Image" class="product__image"></img>
+            <article class="product single">
+              <img ng-src="{{category.products[0].mozjpeg_image}}" alt="{{category.products[0].name}} Image" class="product__image"></img>
 
               <div class="product__info">
-                <p class="name" ng-bind="product.name"></p>
+                <p class="name" ng-bind="category.products[0].name"></p>
 
                 <p class="rating">
                   <img src="src/images/star.svg" alt="rating">
-                  {{product.rating}}
+                  {{category.products[0].rating}}
                 </p>
 
                 <div class="buttons">
-                  <a data-bs-toggle="modal" data-bs-target="#productPage" ng-click="openModal($index)">learn more</a>
+                  <a data-bs-toggle="modal" data-bs-target="{{category.products[0].target}}">learn more</a>
+
+                  <a href="">buy</a>
+                </div>
+              </div>
+            </article>
+            <article class="product single">
+              <img ng-src="{{category.products[1].mozjpeg_image}}" alt="{{category.products[1].name}} Image" class="product__image"></img>
+
+              <div class="product__info">
+                <p class="name" ng-bind="category.products[1].name"></p>
+
+                <p class="rating">
+                  <img src="src/images/star.svg" alt="rating">
+                  {{category.products[1].rating}}
+                </p>
+
+                <div class="buttons">
+                  <a data-bs-toggle="modal" data-bs-target="{{category.products[1].target}}">learn more</a>
+
+                  <a href="">buy</a>
+                </div>
+              </div>
+            </article>
+            <article class="product single">
+              <img ng-src="{{category.products[2].mozjpeg_image}}" alt="{{category.products[2].name}} Image" class="product__image"></img>
+
+              <div class="product__info">
+                <p class="name" ng-bind="category.products[2].name"></p>
+
+                <p class="rating">
+                  <img src="src/images/star.svg" alt="rating">
+                  {{category.products[2].rating}}
+                </p>
+
+                <div class="buttons">
+                  <a data-bs-toggle="modal" data-bs-target="{{category.products[2].target}}">learn more</a>
+
+                  <a href="">buy</a>
+                </div>
+              </div>
+            </article>
+            <article class="product single">
+              <img ng-src="{{category.products[3].mozjpeg_image}}" alt="{{category.products[3].name}} Image" class="product__image"></img>
+
+              <div class="product__info">
+                <p class="name" ng-bind="category.products[3].name"></p>
+
+                <p class="rating">
+                  <img src="src/images/star.svg" alt="rating">
+                  {{category.products[3].rating}}
+                </p>
+
+                <div class="buttons">
+                  <a data-bs-toggle="modal" data-bs-target="{{category.products[3].target}}">learn more</a>
 
                   <a href="">buy</a>
                 </div>
@@ -67,14 +121,46 @@
 </main>
 
 <!-- The Product Modal -->
-<div id="productPage" class="modal fade" ng-include="'src/components/product-modal.html'" ng-controller="productCtrl"></div>
+<!-- <div id="productPage" class="modal fade" ng-include="'/src/components/modals/pure.html'" ng-controller="productCtrl"></div> -->
 
-<!-- <div id="bottom-navigation" ng-include="'src/components/bottom-nav.html'"></div> -->
-<!-- <div id="bottom-navigation" bottom-navigation page="{{$route.current.activePage}}" links=["Basic", "Blended", "Ethnic", "Unique"]></div> -->
+<!-- The Pure Modal -->
+<div id="pureModal" class="modal fade" ng-include="'/src/components/modals/pure.html'" ng-controller="productCtrl"></div>
+<!-- Exquisite Modal -->
+<div id="exquisiteModal" class="modal fade" ng-include="'/src/components/modals/exquisite.html'" ng-controller="productCtrl"></div>
+<!-- Garlic Modal -->
+<div id="garlicModal" class="modal fade" ng-include="'/src/components/modals/garlic.html'" ng-controller="productCtrl"></div>
+<!-- Smoky Modal -->
+<div id="smokyModal" class="modal fade" ng-include="'/src/components/modals/smoky.html'" ng-controller="productCtrl"></div>
+<!-- Italian Modal -->
+<div id="italianModal" class="modal fade" ng-include="'/src/components/modals/italian.html'" ng-controller="productCtrl"></div>
+<!-- Cajun Modal -->
+<div id="cajunModal" class="modal fade" ng-include="'/src/components/modals/cajun.html'" ng-controller="productCtrl"></div>
+<!-- Tango Modal -->
+<div id="tangoModal" class="modal fade" ng-include="'/src/components/modals/tango.html'" ng-controller="productCtrl"></div>
+<!-- Sizzling Modal -->
+<div id="sizzlingModal" class="modal fade" ng-include="'/src/components/modals/sizzling.html'" ng-controller="productCtrl"></div>
+<!-- Mediterranean Modal -->
+<div id="mediterraneanModal" class="modal fade" ng-include="'/src/components/modals/mediterranean.html'" ng-controller="productCtrl"></div>
+<!-- Savory Modal -->
+<div id="savoryModal" class="modal fade" ng-include="'/src/components/modals/savory.html'" ng-controller="productCtrl"></div>
+<!-- Sultan Modal -->
+<div id="sultanModal" class="modal fade" ng-include="'/src/components/modals/sultan.html'" ng-controller="productCtrl"></div>
+<!-- Harmony Modal -->
+<div id="harmonyModal" class="modal fade" ng-include="'/src/components/modals/harmony.html'" ng-controller="productCtrl"></div>
+<!-- Flavor Modal -->
+<div id="flavorModal" class="modal fade" ng-include="'/src/components/modals/flavor.html'" ng-controller="productCtrl"></div>
+<!-- Divine Modal -->
+<div id="divineModal" class="modal fade" ng-include="'/src/components/modals/divine.html'" ng-controller="productCtrl"></div>
+<!-- Secret Modal -->
+<div id="secretModal" class="modal fade" ng-include="'/src/components/modals/secret.html'" ng-controller="productCtrl"></div>
+<!-- Aromatic Modal -->
+<div id="aromaticModal" class="modal fade" ng-include="'/src/components/modals/aromatic.html'" ng-controller="productCtrl"></div>
+
+<!-- <div id="pureModal" products-modal class="modal fade" selectedItem="products[0]"></div> -->
 
 <!-- The Bottom Navigation -->
 <div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="productLinks"></div>
 
 
 <!-- The Footer -->
-<footer id="footer" ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>
+<footer id="footer" ng-include="'/src/components/footer.html'" ng-controller="footerCtrl"></footer>

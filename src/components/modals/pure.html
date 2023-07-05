@@ -1,4 +1,5 @@
 
+
 <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-scrollable">
   <div class="modal-content">
       <div class="modal-header">
@@ -12,24 +13,24 @@
         <section class="modal-body__content">
           <div class="product-intro">
             <div class="product__heading">
-              <h3 ng-bind="selectedItem.name"></h3>
+              <h3 ng-bind="products[0].name"></h3>
         
               <div class="price-rating">
-                <p ng-bind="selectedItem.price | currency: '₦'"></p>
+                <p ng-bind="products[0].price | currency: '₦'"></p>
                 <div>
                   <img src="src/images/star.svg" alt="Star">
-                  <p ng-bind="selectedItem.rating"></p>
+                  <p ng-bind="products[0].rating"></p>
                 </div>
               </div>
 
               <div class="category">
                 <p>Category:</p>
-                <p ng-bind="selectedItem.category"></p>
+                <p ng-bind="products[0].category"></p>
               </div>
             </div>
         
             <div class="product__image">
-              <img ng-src="{{selectedItem.mozjpeg_image}}" alt="{{selectedItem.name}} Image">
+              <img ng-src="{{products[0].mozjpeg_image}}" alt="{{products[0].name}} Image">
         
               <div class="product-buttons">
                 <button>add a review</button>
@@ -50,7 +51,7 @@
                   </button>
                 </h2>
                 <div id="productDescription" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.description"></div>
+                  <div class="accordion-body" ng-bind="products[0].description"></div>
                 </div>
               </div>
         
@@ -62,7 +63,7 @@
                   </button>
                 </h2>
                 <div id="productOrigin" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.origin"></div>
+                  <div class="accordion-body" ng-bind="products[0].origin"></div>
                 </div>
               </div>
         
@@ -74,7 +75,7 @@
                   </button>
                 </h2>
                 <div id="productBenefits" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.health_benefits"></div>
+                  <div class="accordion-body" ng-bind="products[0].health_benefits"></div>
                 </div>
               </div>
         
@@ -86,7 +87,7 @@
                   </button>
                 </h2>
                 <div id="productIngredients" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.ingredients"></div>
+                  <div class="accordion-body" ng-bind="products[0].ingredients"></div>
                 </div>
               </div>
         
@@ -98,7 +99,7 @@
                   </button>
                 </h2>
                 <div id="productFlavor" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.flavor_profile"></div>
+                  <div class="accordion-body" ng-bind="products[0].flavor_profile"></div>
                 </div>
               </div>
         
@@ -110,7 +111,7 @@
                   </button>
                 </h2>
                 <div id="productUsage" class="accordion-collapse collapse" data-bs-parent="#productInformation">
-                  <div class="accordion-body" ng-bind="selectedItem.suggested_usage"></div>
+                  <div class="accordion-body" ng-bind="products[0].suggested_usage"></div>
                 </div>
               </div>
         

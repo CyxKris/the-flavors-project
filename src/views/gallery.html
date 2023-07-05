@@ -1,6 +1,11 @@
 
+<!-- The Header -->
 <header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
+<!-- The Cart -->
+<div ng-include="'src/components/cart.html'" class="offcanvas offcanvas-start" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false" ng-controller="productCtrl"></div>
+
+<!-- The Main Content of The Page -->
 <main id="gallery">
   <section id="hero">
     <h1>view our photos.</h1>
@@ -19,6 +24,8 @@
   </section>
 </main>
 
+<!-- The Bottom Navigation -->
 <div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="galleryLinks"></div>
 
+<!-- The Footer -->
 <footer id="footer" ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>

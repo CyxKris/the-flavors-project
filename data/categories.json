@@ -2,6 +2,7 @@
     {
         "category": "Basic Seasoning",
         "selector": "basic",
+        "target": "#basicModal",
         "description": "The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.",
         "images": [
             "src/images/products/basic-seasoning-box.webp",
@@ -12,6 +13,7 @@
             {
                 "id": 1,
                 "name": "Pure Crystal Sea Salt",
+                "target": "#pureModal",
                 "transparent_image": "src/images/products/singles/pure-crystal-transparent-light.png",
                 "webp_image": "src/images/products/singles/pure-crystal-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/pure-crystal-white-bg.jpg",
@@ -27,6 +29,7 @@
             {
                 "id": 2,
                 "name": "Exquisite Black Diamond Pepper",
+                "target": "#exquisiteModal",
                 "transparent_image": "src/images/products/singles/black-pepper-transparent-light.png",
                 "webp_image": "src/images/products/singles/black-pepper-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/black-pepper-white-bg.jpg",
@@ -42,6 +45,7 @@
             {
                 "id": 3,
                 "name": "Garlic Elixir Powder",
+                "target": "#garlicModal",
                 "transparent_image": "src/images/products/singles/garlic-elixir-transparent-light.png",
                 "webp_image": "src/images/products/singles/garlic-elixir-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/garlic-elixir-white-bg.jpg",
@@ -57,6 +61,7 @@
             {
                 "id": 4,
                 "name": "Smoky Paprika Fusion",
+                "target": "#smokyModal",
                 "transparent_image": "src/images/products/singles/smoky-paprika-transparent-light.png",
                 "webp_image": "src/images/products/singles/smoky-paprika-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/smoky-paprika-white-bg.jpg",
@@ -74,6 +79,7 @@
     {
         "category": "Blended Seasoning",
         "selector": "blended",
+        "target": "#blendedModal",
         "description": "The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.",
         "images": [
             "src/images/products/blended-seasoning-box.webp",
@@ -84,6 +90,7 @@
             {
                 "id": 5,
                 "name": "Italian Symphony Medley",
+                "target": "#italianModal",
                 "transparent_image": "src/images/products/singles/italian-symphony-transparent-light.png",
                 "webp_image": "src/images/products/singles/italian-symphony-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/italian-symphony-white-bg.jpg",
@@ -99,6 +106,7 @@
             {
                 "id": 6,
                 "name": "Cajun Opulence Blend",
+                "target": "#cajunModal",
                 "transparent_image": "src/images/products/singles/cajun-opulence-transparent-light.png",
                 "webp_image": "src/images/products/singles/cajun-opulence-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/cajun-opulence-white-bg.jpg",
@@ -114,6 +122,7 @@
             {
                 "id": 7,
                 "name": "Tango Tango Taco Seasoning",
+                "target": "#tangoModal",
                 "transparent_image": "src/images/products/singles/tango-tango-transparent-light.png",
                 "webp_image": "src/images/products/singles/tango-tango-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/tango-tango-white-bg.jpg",
@@ -129,6 +138,7 @@
             {
                 "id": 8,
                 "name": "Sizzling Ember Barbecue Rub",
+                "target": "#sizzlingModal",
                 "transparent_image": "src/images/products/singles/sizzling-ember-transparent-light.png",
                 "webp_image": "src/images/products/singles/sizzling-ember-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/sizzling-ember-white-bg.jpg",
@@ -146,6 +156,7 @@
     {
         "category": "Ethnic and International Flavors",
         "selector": "ethnic",
+        "target": "#ethnicModal",
         "description": "The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.",
         "images": [
             "src/images/products/ethnic-&-international-box.webp",
@@ -156,6 +167,7 @@
             {
                 "id": 9,
                 "name": "Mediterranean Serenade Herbs",
+                "target": "#mediterraneanModal",
                 "transparent_image": "src/images/products/singles/mediterranean-transparent-light.png",
                 "webp_image": "src/images/products/singles/mediterranean-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/mediterranean-white-bg.jpg",
@@ -171,6 +183,7 @@
             {
                 "id": 10,
                 "name": "Savory Secrets of Asia",
+                "target": "#savoryModal",
                 "transparent_image": "src/images/products/singles/savory-secrets-transparent-light.png",
                 "webp_image": "src/images/products/singles/savory-secrets-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/savory-secrets-white-bg.jpg",
@@ -186,6 +199,7 @@
             {
                 "id": 11,
                 "name": "Sultan's Delight Moroccan Spice Mix",
+                "target": "#sultanModal",
                 "transparent_image": "src/images/products/singles/sultan's-delight-transparent-light.png",
                 "webp_image": "src/images/products/singles/sultan's-delight-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/sultan's-delight-white-bg.jpg",
@@ -201,6 +215,7 @@
             {
                 "id": 12,
                 "name": "Harmony of Flavors Mexican Blend",
+                "target": "#harmonyModal",
                 "transparent_image": "src/images/products/singles/harmony-of-flavors-transparent-light.png",
                 "webp_image": "src/images/products/singles/harmony-of-flavors-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/harmony-of-flavors-white-bg.jpg",
@@ -218,6 +233,7 @@
     {
         "category": "Unique and Signature Blends",
         "selector": "unique",
+        "target": "#uniqueModal",
         "description": "The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.",
         "images": [
             "src/images/products/unique-&-signature-box.webp",
@@ -228,6 +244,7 @@
             {
                 "id": 13,
                 "name": "Flavor Fusion Magic",
+                "target": "#flavorModal",
                 "transparent_image": "src/images/products/singles/flavor-fusion-transparent-light.png",
                 "webp_image": "src/images/products/singles/flavor-fusion-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/flavor-fusion-white-bg.jpg",
@@ -243,6 +260,7 @@
             {
                 "id": 14,
                 "name": "Divine Elixir Blend",
+                "target": "#divineModal",
                 "transparent_image": "src/images/products/singles/divine-elixir-transparent-light.png",
                 "webp_image": "src/images/products/singles/divine-elixir-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/divine-elixir-white-bg.jpg",
@@ -258,6 +276,7 @@
             {
                 "id": 15,
                 "name": "Secret Symphony Seasoning",
+                "target": "#secretModal",
                 "transparent_image": "src/images/products/singles/secret-symphony-transparent-light.png",
                 "webp_image": "src/images/products/singles/secret-symphony-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/secret-symphony-white-bg.jpg",
@@ -273,6 +292,7 @@
             {
                 "id": 16,
                 "name": "Aromatic Bliss Infusion",
+                "target": "#aromaticModal",
                 "transparent_image": "src/images/products/singles/aromatic-bliss-transparent-light.png",
                 "webp_image": "src/images/products/singles/aromatic-bliss-white-bg.webp",
                 "mozjpeg_image": "src/images/products/singles/aromatic-bliss-white-bg.jpg",

@@ -1,58 +1,69 @@
 @use '../utilities';
 
 #home {
+
+    transform: scale(.8);
+    animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
     section {        
         position: relative;
         // padding-inline: 1rem;
 
         &#hero {
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-block: 6rem 4rem;
-            font-size: 3rem;
+            
 
-    
-            h1 {
-                font-size: 5rem;
-                line-height: 91.2%;
-                text-transform: lowercase;
-                max-width: 90%;
+            .hero__content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-block: 6rem 4rem;
+                font-size: 3rem;
+
+                max-width: 1600px;
                 margin-inline: auto;
-                margin-bottom: 6rem;
-    
-                @include utilities.breakpoint(xsmall) {
-                    font-size: 6rem;
+
+
+                h1 {
+                    font-size: 5rem;
+                    line-height: 91.2%;
+                    text-transform: lowercase;
+                    max-width: 90%;
+                    margin-inline: auto;
+                    margin-bottom: 6rem;
+        
+                    @include utilities.breakpoint(xsmall) {
+                        font-size: 6rem;
+                    }
+        
+                    @include utilities.breakpoint(medium) {
+                        font-size: 10rem;
+                    }
+        
+                    @include utilities.breakpoint(large) {
+                        font-size: 15rem;
+                    }
                 }
     
-                @include utilities.breakpoint(medium) {
-                    font-size: 10rem;
-                }
-    
-                @include utilities.breakpoint(large) {
-                    font-size: 15rem;
-                }
-            }
-
-            .slider {
-                border: 2px solid var(--black1);
-                border-radius: 1rem;
-                width: 95%;
-                // max-height: 500px;
-
-                .carousel-inner {
-
+                .slider {
+                    border: 2px solid var(--black1);
                     border-radius: 1rem;
-
-                    .carousel-item {
+                    width: 95%;
+                    // max-height: 500px;
+    
+                    .carousel-inner {
+    
                         border-radius: 1rem;
-
-                        img {
+    
+                        .carousel-item {
                             border-radius: 1rem;
-                            width: 100%;
-                            object-fit: cover;
+    
+                            img {
+                                border-radius: 1rem;
+                                width: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
                 }
@@ -89,77 +100,83 @@
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
 
-            .achievements {
-                display: flex;
-                flex-direction: column;
-                gap: 5rem;
+            .about__content {
 
-                @include utilities.breakpoint (medium) {
-                    padding-inline: 3rem;
-                }
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (large) {
-                    padding-inline: 0;
-                    max-width: 90%;
-                    margin-inline: auto;
-                }
-
-
-                .achievement {
-                    background-color: var(--white);
-                    border-radius: 1rem;
-                    padding: 3rem 1rem;
-                    position: relative;
-
+                .achievements {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5rem;
+    
                     @include utilities.breakpoint (medium) {
-                        width: 85%;
+                        padding-inline: 3rem;
                     }
-
+    
                     @include utilities.breakpoint (large) {
-                        width: 70%;
+                        padding-inline: 0;
+                        max-width: 90%;
+                        margin-inline: auto;
                     }
-
-                    &:nth-child(2) {
-                        
-
+    
+    
+                    .achievement {
+                        background-color: var(--white);
+                        border-radius: 1rem;
+                        padding: 3rem 1rem;
+                        position: relative;
+    
                         @include utilities.breakpoint (medium) {
-                            text-align: right;
-                            align-self: end;
+                            width: 85%;
                         }
-
-                        .achievement__image {
+    
+                        @include utilities.breakpoint (large) {
+                            width: 70%;
+                        }
+    
+                        &:nth-child(2) {
                             
-                            @include utilities.breakpoint (large) {
-                                inset: -40px -20px auto auto;
+    
+                            @include utilities.breakpoint (medium) {
+                                text-align: right;
+                                align-self: end;
+                            }
+    
+                            .achievement__image {
+                                
+                                @include utilities.breakpoint (large) {
+                                    inset: -40px -20px auto auto;
+                                }
                             }
                         }
-                    }
-
-
-
-                    &__heading {
-                        text-decoration: underline;
-                        text-transform: uppercase;
-                        font-size: 2rem;
-                        margin-bottom: 1rem;
-                        position: relative;
-                        z-index: 2;
-                    }
-
-                    &__image {
-                        width: 110px;
-                        position: absolute;
-                        inset: -10px -10px auto auto;
-
-                        @include utilities.breakpoint (large) {
-                            inset: -30px auto auto -20px;
+    
+    
+    
+                        &__heading {
+                            text-decoration: underline;
+                            text-transform: uppercase;
+                            font-size: 2rem;
+                            margin-bottom: 1rem;
+                            position: relative;
+                            z-index: 2;
                         }
-                    }
-
-                    &__content {
-                        font-size: 1.5rem;
-                        line-height: 1.6;
-                        text-transform: lowercase;
+    
+                        &__image {
+                            width: 110px;
+                            position: absolute;
+                            inset: -10px -10px auto auto;
+    
+                            @include utilities.breakpoint (large) {
+                                inset: -30px auto auto -20px;
+                            }
+                        }
+    
+                        &__content {
+                            font-size: 1.5rem;
+                            line-height: 1.6;
+                            text-transform: lowercase;
+                        }
                     }
                 }
             }
@@ -168,42 +185,48 @@
         &#more{
             background-color: var(--pink);
 
-            h2 {
-                text-align: center;
-
-                @include utilities.breakpoint (large) {
-                    max-width: 100%;
-                }
-            }
-
             .more__content {
-                background-color: var(--white);
-                border-radius: 1rem;
-                padding: 3rem 1rem;
-                position: relative;
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
+
+                h2 {
+                    text-align: center;
+    
+                    @include utilities.breakpoint (large) {
+                        max-width: 100%;
+                    }
                 }
-
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                img {
-                    width: 180px;
-                    object-fit: contain;
-                    position: absolute;
-                    inset: -90px -50px auto auto;
-                }
-
-                p {
-                    font-size: 1.5rem;
-                    line-height: 1.6;
-                    text-transform: uppercase;
+    
+                .more__info {
+                    background-color: var(--white);
+                    border-radius: 1rem;
+                    padding: 3rem 1rem;
                     position: relative;
-                    z-index: 2;
+    
+                    @include utilities.breakpoint (medium) {
+                        max-width: 90%;
+                        margin-inline: auto;
+                    }
+    
+                    @include utilities.breakpoint (large) {
+                        max-width: 80%;
+                    }
+    
+                    img {
+                        width: 180px;
+                        object-fit: contain;
+                        position: absolute;
+                        inset: -90px -50px auto auto;
+                    }
+    
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 1.6;
+                        text-transform: uppercase;
+                        position: relative;
+                        z-index: 2;
+                    }
                 }
             }
         }
@@ -211,81 +234,86 @@
         &#best{
             background-color: var(--pastel-beige2);
 
-            .best__products {
-
-                width: 90%;
+            .best__content {
+                max-width: 1600px;
                 margin-inline: auto;
-                color: var(--white);
 
-                display: grid;
-                gap: 1rem;
+                .best__products {
 
-                @include utilities.breakpoint (medium) {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 0;
-                }
-
-                .product {
-
-                    background-color: var(--black1);
-                    text-align: center;
-                    padding-block: .5rem 1rem;
-                    border-radius: 1rem;
-                    height: 100%;
-
-                    &__image {
-                        position: relative;
-
-                        img {
-                            width: 100%;
-                            object-fit: cover;
+                    width: 90%;
+                    margin-inline: auto;
+                    color: var(--white);
+    
+                    display: grid;
+                    gap: 1rem;
+    
+                    @include utilities.breakpoint (medium) {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 0;
+                    }
+    
+                    .product {
+    
+                        background-color: var(--black1);
+                        text-align: center;
+                        padding-block: .5rem 1rem;
+                        border-radius: 1rem;
+                        height: 100%;
+    
+                        &__image {
                             position: relative;
-                            z-index: 2;
-                        }
-
-                        .blob {
-                            position: absolute;
-                            inset: 0;
-                            z-index: 1;
-
-                            width: 200px;
-                            margin: auto;
-
-                            @include utilities.breakpoint (xsmall) {
-                                width: 280px;
+    
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                                position: relative;
+                                z-index: 2;
+                            }
+    
+                            .blob {
+                                position: absolute;
+                                inset: 0;
+                                z-index: 1;
+    
+                                width: 200px;
+                                margin: auto;
+    
+                                @include utilities.breakpoint (xsmall) {
+                                    width: 280px;
+                                }
                             }
                         }
-                    }
-
-                    &__name {
-                        text-transform: uppercase;
-                        position: relative;
-                        z-index: 3;
-
-                        font-size: 1.125rem;
-
-                        @include utilities.breakpoint (medium) {
-                            font-size: 1.5rem;
-                        }
-                    }
-
-                    &__rating {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        font-size: 1.125rem;
-
-                        @include utilities.breakpoint (medium) {
-                            font-size: 1.25rem;
-                        }
-
-                        img {
-                            width: 25px;
-                            object-fit: contain;
-
+    
+                        &__name {
+                            text-transform: uppercase;
+                            position: relative;
+                            z-index: 3;
+    
+                            font-size: 1.125rem;
+    
                             @include utilities.breakpoint (medium) {
-                                width: 30px;
+                                font-size: 1.5rem;
+                            }
+                        }
+    
+                        &__rating {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            font-size: 1.125rem;
+    
+                            @include utilities.breakpoint (medium) {
+                                font-size: 1.25rem;
+                            }
+    
+                            img {
+                                width: 25px;
+                                object-fit: contain;
+    
+                                @include utilities.breakpoint (medium) {
+                                    width: 30px;
+                                }
                             }
                         }
                     }
@@ -296,55 +324,60 @@
         &#testimonials {
             background-color: var(--pastel-blue);
 
-            #testimonialContent {
-                background-color: var(--white);
-                border-radius: 1.25rem;
-                padding: 3rem;
+            .testimonials__content {
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
-                }
-
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                .carousel-inner {
-
-                    .main-content {
-                        .review {
-                            line-height: 1.6;
-                            text-transform: lowercase;
-                            font-size: 1.25rem;
-                            text-align: center;
-
-                            @include utilities.breakpoint (large) {
-                                font-size: 1.5rem;
+                #testimonialContent {
+                    background-color: var(--white);
+                    border-radius: 1.25rem;
+                    padding: 3rem;
+    
+                    @include utilities.breakpoint (medium) {
+                        max-width: 90%;
+                        margin-inline: auto;
+                    }
+    
+                    @include utilities.breakpoint (large) {
+                        max-width: 80%;
+                    }
+    
+                    .carousel-inner {
+    
+                        .main-content {
+                            .review {
+                                line-height: 1.6;
+                                text-transform: lowercase;
+                                font-size: 1.25rem;
+                                text-align: center;
+    
+                                @include utilities.breakpoint (large) {
+                                    font-size: 1.5rem;
+                                }
+                            }
+    
+                            .name {
+                                font-family: var(--montserrat);
+                                text-transform: uppercase;
+                                text-align: center;
                             }
                         }
-
-                        .name {
-                            font-family: var(--montserrat);
-                            text-transform: uppercase;
-                            text-align: center;
+                    }
+    
+                    .quote-image {
+                        position: absolute;
+                        width: 60px;
+                        inset: 25px auto auto -10px;
+    
+                        @include utilities.breakpoint (medium) {
+                            width: 80px;
+                            inset: 5px auto auto -15px;
                         }
-                    }
-                }
-
-                .quote-image {
-                    position: absolute;
-                    width: 60px;
-                    inset: 25px auto auto -10px;
-
-                    @include utilities.breakpoint (medium) {
-                        width: 80px;
-                        inset: 5px auto auto -15px;
-                    }
-
-                    @include utilities.breakpoint (large) {
-                        width: 100px;
-                        inset: -15px auto auto -25px;
+    
+                        @include utilities.breakpoint (large) {
+                            width: 100px;
+                            inset: -15px auto auto -25px;
+                        }
                     }
                 }
             }
@@ -353,46 +386,51 @@
         &#new-arrivals {
             background-color: var(--pastel-orange);
 
-            h2 {
-                margin-bottom: 6rem;
-            }
+            .new-arrivals__content {
+                max-width: 1600px;
+                margin-inline: auto;
 
-            .new-arrivals {
-                display: flex;
-                flex-direction: column;
-                
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
+                h2 {
+                    margin-bottom: 6rem;
                 }
-
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                &__content {
-                    font-size: 1.25rem;
-                    text-transform: uppercase;
-
-                    @include utilities.breakpoint (medium) {
-                        max-width: 75%;
-                        font-size: 1.5rem;
-                    }
-
-                    &:last-child {
-                        text-align: right;
-                        align-self: flex-end;
-                    }
-                }
-
-                &__image {
-                    width: 90%;
-                    margin: 5rem auto;
+    
+                .new-arrivals {
+                    display: flex;
+                    flex-direction: column;
                     
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
+                    @include utilities.breakpoint (medium) {
+                        max-width: 90%;
+                        margin-inline: auto;
+                    }
+    
+                    @include utilities.breakpoint (large) {
+                        max-width: 80%;
+                    }
+    
+                    &__content {
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+    
+                        @include utilities.breakpoint (medium) {
+                            max-width: 75%;
+                            font-size: 1.5rem;
+                        }
+    
+                        &:last-child {
+                            text-align: right;
+                            align-self: flex-end;
+                        }
+                    }
+    
+                    &__image {
+                        width: 90%;
+                        margin: 5rem auto;
+                        
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 1rem;
+                        }
                     }
                 }
             }
@@ -405,63 +443,69 @@
 
             text-align: center;
 
-            h2 {
+            .news__content {
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (large) {
-                    max-width: 100%;
+
+                h2 {
+
+                    @include utilities.breakpoint (large) {
+                        max-width: 100%;
+                    }
                 }
-            }
-
-            form {
-                margin-top: 6rem;
-
-                div {
-                    border-bottom: 2px solid var(--black1);
-                    width: 80%;
-                    margin-inline: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-                    padding-inline: 1rem;
-
-                    @include utilities.breakpoint (medium) {
-                        width: 50%;
-                    }
-
-                    ::placeholder {
-                        color: var(--black1);
-                        opacity: 1;
-                    }
-
-                    input {
-                        font-size: 1.5rem;
-                        background-color: transparent;
-                        border: none;
-                        padding: .5rem 1rem;
-
-                        flex: 1;
-
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover, 
-                        &:-webkit-autofill:focus, 
-                        &:-webkit-autofill:active {
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: var(--black1);
-                        }
-                    }
-
-                    button {
-
-                        background-color: transparent;
-                        border: none;
-                        padding-block: .5rem;
     
-                        img {
-                            width: 40px;
-                            
+                form {
+                    margin-top: 6rem;
+    
+                    div {
+                        border-bottom: 2px solid var(--black1);
+                        width: 80%;
+                        margin-inline: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        padding-inline: 1rem;
+    
+                        @include utilities.breakpoint (medium) {
+                            width: 50%;
                         }
+    
+                        ::placeholder {
+                            color: var(--black1);
+                            opacity: 1;
+                        }
+    
+                        input {
+                            font-size: 1.5rem;
+                            background-color: transparent;
+                            border: none;
+                            padding: .5rem 1rem;
+    
+                            flex: 1;
+    
+                            &:-webkit-autofill,
+                            &:-webkit-autofill:hover, 
+                            &:-webkit-autofill:focus, 
+                            &:-webkit-autofill:active {
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: var(--black1);
+                            }
+                        }
+    
+                        button {
+    
+                            background-color: transparent;
+                            border: none;
+                            padding-block: .5rem;
+        
+                            img {
+                                width: 40px;
+                                
+                            }
+                        }
+    
                     }
-
                 }
             }
         }

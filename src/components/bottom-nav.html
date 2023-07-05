@@ -3,12 +3,11 @@
 
 <nav>
   <!-- <a href="#!{{page}}#header" id="back-to-top" ng-click="scrollToHeader(page)"><img src="src/images/bx-chevron-up.svg"></a> -->
-  <a href="#/{{page}}#header" id="back-to-top"><img src="src/images/bx-chevron-up.svg"></a>
+  <a href="#/{{page}}#header" id="back-to-top"><img src="/src/images/bx-chevron-up.svg"></a>
 
   <ul>
     <li id="page" ng-bind="page"></li>
     <!-- <li ng-repeat="link in links"><a href="#!{{page}}#{{link}}" ng-click="scrollToLink(link, page)" ng-bind="link"></a></li> -->
-    <!-- <li ng-repeat="link in links"><a href="#!/{{page}}#{{link}}" ng-bind="link"></a></li> -->
     <li ng-repeat="link in links"><a ng-href="#/{{page}}#{{link}}" target="_self" ng-bind="link"></a></li>
   </ul>
 </nav>

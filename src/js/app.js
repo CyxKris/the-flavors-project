@@ -1,5 +1,5 @@
 
-const myApp = angular.module("myApp", ["ngRoute"]);
+const myApp = angular.module("myApp", ["ngRoute", "ngAnimate"]);
 
 // ?The configuration for the website
 myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
@@ -18,24 +18,29 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
 
     $routeProvider
         .when('/home', {
-            templateUrl: './src/views/home.html',
+            templateUrl: '/src/views/home.html',
             controller: 'headerCtrl',
             activePage: 'home'
         })
         .when('/products', {
-            templateUrl: './src/views/products.html',
+            templateUrl: '/src/views/products.html',
             controller: 'headerCtrl',
             activePage: 'products'
         })
         .when('/about', {
-            templateUrl: './src/views/about.html',
+            templateUrl: '/src/views/about.html',
             controller: 'headerCtrl',
             activePage: 'about'
         })
         .when('/gallery', {
-            templateUrl: './src/views/gallery.html',
+            templateUrl: '/src/views/gallery.html',
             controller: 'headerCtrl',
             activePage: 'gallery'
+        })
+        .when('/sitemap', {
+            templateUrl: '/src/views/sitemap.html',
+            controller: 'mainCtrl',
+            activePage: 'sitemap'
         })
         .otherwise('/home');
 }]);
@@ -96,16 +101,15 @@ myApp.controller(
 myApp.controller(
     'homeCtrl',
     ['$scope', '$http', function ($scope, $http) {
-        $scope.imageSrc = 'src/images/products/basic-seasoning-box.webp';
 
         $http
-            .get('data/best-products.json')
+            .get('/data/best-products.json')
             .then(function (response) {
                 $scope.bestProducts = response.data;
             });
         
         $http
-            .get('data/testimonials.json')
+            .get('/data/testimonials.json')
             .then(function (response) {
                 $scope.testimonials = response.data;
             });
@@ -136,7 +140,7 @@ myApp.controller(
     ['$scope', '$http', function ($scope, $http) {
 
         // Getting the categories data
-        $http.get('data/categories.json')
+        $http.get('/data/categories.json')
             .then(function (response) {
                 $scope.categories = response.data;
             });
@@ -236,7 +240,7 @@ myApp.controller(
 myApp.controller(
     'footerCtrl',
     ['$scope', '$http', function ($scope, $http) {
-        $scope.footerLogo = 'src/images/flavors-logo-with-icon-white.svg';
+        $scope.footerLogo = '/src/images/flavors-logo-with-icon-white.svg';
 
         // ?Getting user's location
         const getLocation = () => {
@@ -315,7 +319,7 @@ myApp.directive(
     function () {
         return {
             restrict: 'EA',
-            templateUrl: 'src/components/bottom-nav.html',
+            templateUrl: '/src/components/bottom-nav.html',
             scope: {
                 page: '=',
                 links: '='
@@ -333,7 +337,7 @@ myApp.directive(
     function () {
         return {
             restrict: 'EA',
-            templateUrl: 'src/components/best-product.html',
+            templateUrl: '/src/components/best-product.html',
             scope: {
                 name: '=',
                 image: '=',

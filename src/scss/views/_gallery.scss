@@ -3,6 +3,9 @@
 
 #gallery {
 
+    transform: scale(.8);
+    animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
     section {
         // The hero section
         &#hero {

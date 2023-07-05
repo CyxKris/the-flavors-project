@@ -3,7 +3,7 @@
 <header id="header" ng-include="'/src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
 <!-- The Cart -->
-<div ng-include="'/src/components/cart.html'" class="offcanvas offcanvas-start" tabindex="-1" id="cart" aria-labelledby="cartLabel" ng-controller="productCtrl"></div>
+<div ng-include="'/src/components/cart.html'" class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false" ng-controller="productCtrl"></div>
 
 <!-- The Main Content of The Page -->
 <main id="products" ng-controller="productCtrl">

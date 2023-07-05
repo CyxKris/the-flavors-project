@@ -1,0 +1,81 @@
+
+<!-- The Header -->
+<header id="header" ng-include="'/src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
+
+<!-- The Cart -->
+<div ng-include="'/src/components/cart.html'" class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false" ng-controller="productCtrl"></div>
+
+
+<!-- The Main Content of The Page -->
+<main id="sitemap">
+  <section id="hero">
+
+    <div class="hero__content">
+      <h1>all our links</h1>
+    </div>
+
+  </section>
+
+  <section id="home-links">
+    <div class="home-links__content">
+      <h2>Home</h2>
+
+      <div class="links">
+        <a href="#/home#image-slider"><h3>Image Slider</h3></a>
+        <a href="#/home#about"><h3>About</h3></a>
+        <a href="#home#more"><h3>More</h3></a>
+        <a href="#home#best"><h3>Best-Sellers</h3></a>
+        <a href="#home#testimonials"><h3>Testimonials</h3></a>
+        <a href="#home#new-arrivals"><h3>New Arrivals</h3></a>
+        <a href="#home#news"><h3>Join our Newsletter</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="product-links">
+    <div class="product-links__content">
+      <h2>Product Page</h2>
+
+      <div class="links">
+        <a href="#products#basic"><h3>Basic Seasoning</h3></a>
+        <a href="#products#blended"><h3>Blended Seasoning</h3></a>
+        <a href="#products#ethnic"><h3>Ethnic and International Flavors</h3></a>
+        <a href="#products#unique"><h3>Unique and Signature Blends</h3></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-links">
+    <div class="about-links__content">
+      <h2>About Page</h2>
+
+      <div class="links">
+        <a href="#/about#who"><h3>Who We Are</h3></a>
+        <a href="#/about#what"><h3>What We Do</h3></a>
+        <a href="#/about#mission"><h3>Mission and Vision</h3></a>
+        <a href="#/about#join"><h3>Join Us</h3></a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="gallery-links">
+    <div class="gallery-links__content">
+      <h2>Gallery Page</h2>
+
+      <div class="links">
+        <a href="#/gallery#products"><h3>Product Images</h3></a>
+        <a href="#/gallery#other"><h3>Other Images</h3></a>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+<!-- The Bottom Navigation -->
+<div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="aboutLinks"></div>
+
+<!-- The Footer -->
+<footer id="footer" ng-include="'/src/components/footer.html'" ng-controller="footerCtrl"></footer>

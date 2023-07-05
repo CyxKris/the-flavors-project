@@ -3,6 +3,9 @@
 
 #about {
 
+    transform: scale(.8);
+    animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
     section {
         // The hero section
         &#hero {
@@ -88,72 +91,78 @@
             border-top-right-radius: 1.25rem;
 
             .who__content {
-                display: flex;
-                flex-direction: column;
 
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
-                }
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                .text {
-                    font-size: 1.5rem;
-                    position: relative;
-                    z-index: 2;
-
+                .who__main {
+                    display: flex;
+                    flex-direction: column;
+    
                     @include utilities.breakpoint (medium) {
-                        max-width: 75%;
+                        max-width: 90%;
+                        margin-inline: auto;
                     }
-
+    
                     @include utilities.breakpoint (large) {
-                        font-size: 2rem;
+                        max-width: 80%;
                     }
-
-                    &:last-child {
-                        
+    
+                    .text {
+                        font-size: 1.5rem;
+                        position: relative;
+                        z-index: 2;
+    
                         @include utilities.breakpoint (medium) {
-                            text-align: right;
-                            align-self: flex-end;
+                            max-width: 75%;
                         }
-                    }
-                }
-
-                .image {
-                    width: 80%;
-                    margin: 2rem auto;
-                    text-align: center;
-                    position: relative;
-                    z-index: 1;
-
-                    @include utilities.breakpoint (medium) {
-                        margin-block: 3.5rem;
-                    }
-
-                    @include utilities.breakpoint (large) {
-                        margin-block: 5rem;
-                    }
-
-                    img {
-                        border-radius: 1rem;
-                        width: 60%;
-                        object-fit: cover;
-
-                        &:first-child {
-                            transform: rotate(-20deg);
+    
+                        @include utilities.breakpoint (large) {
+                            font-size: 2rem;
                         }
-
-                        &:nth-child(2) {
-                            transform: rotate(20deg) translate(-10px, -35px);
-
+    
+                        &:last-child {
+                            
                             @include utilities.breakpoint (medium) {
-                                max-height: 300px;
+                                text-align: right;
+                                align-self: flex-end;
                             }
                         }
-
+                    }
+    
+                    .image {
+                        width: 80%;
+                        margin: 2rem auto;
+                        text-align: center;
+                        position: relative;
+                        z-index: 1;
+    
+                        @include utilities.breakpoint (medium) {
+                            margin-block: 3.5rem;
+                        }
+    
+                        @include utilities.breakpoint (large) {
+                            margin-block: 5rem;
+                        }
+    
+                        img {
+                            border-radius: 1rem;
+                            width: 60%;
+                            object-fit: cover;
+    
+                            &:first-child {
+                                transform: rotate(-20deg);
+                            }
+    
+                            &:nth-child(2) {
+                                transform: rotate(20deg) translate(-10px, -35px);
+    
+                                @include utilities.breakpoint (medium) {
+                                    max-height: 300px;
+                                }
+                            }
+    
+                        }
                     }
                 }
             }
@@ -163,53 +172,58 @@
             background-color: var(--pink);
 
             .what__content {
-                display: flex;
-                flex-direction: column;
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
-                }
-
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                .text {
-                    font-size: 1.5rem;
-                    background-color: var(--white);
-                    border-radius: 1.25rem;
-                    padding: 1.5rem;
-
+                .what__main {
+                    display: flex;
+                    flex-direction: column;
+    
                     @include utilities.breakpoint (medium) {
-                        max-width: 85%;
+                        max-width: 90%;
+                        margin-inline: auto;
                     }
-
+    
                     @include utilities.breakpoint (large) {
-                        font-size: 2rem;
+                        max-width: 80%;
                     }
-
-                    &:last-child {
-                        
+    
+                    .text {
+                        font-size: 1.5rem;
+                        background-color: var(--white);
+                        border-radius: 1.25rem;
+                        padding: 1.5rem;
+    
                         @include utilities.breakpoint (medium) {
-                            text-align: right;
-                            align-self: flex-end;
+                            max-width: 85%;
+                        }
+    
+                        @include utilities.breakpoint (large) {
+                            font-size: 2rem;
+                        }
+    
+                        &:last-child {
+                            
+                            @include utilities.breakpoint (medium) {
+                                text-align: right;
+                                align-self: flex-end;
+                            }
                         }
                     }
-                }
+        
+                    .image {
+                        width: 90%;
+                        margin: 4rem auto;
     
-                .image {
-                    width: 90%;
-                    margin: 4rem auto;
-
-                    @include utilities.breakpoint (medium) {
-                        margin-block: 6rem;
-                    }
-    
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
+                        @include utilities.breakpoint (medium) {
+                            margin-block: 6rem;
+                        }
+        
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 1rem;
+                        }
                     }
                 }
             }
@@ -217,56 +231,61 @@
 
         &#more {
             background-color: var(--light-brown);
-            
 
             .more__content {
-                display: flex;
-                flex-direction: column;
+                max-width: 1600px;
+                margin-inline: auto;
 
-                @include utilities.breakpoint (medium) {
-                    max-width: 90%;
-                    margin-inline: auto;
-                }
-
-                @include utilities.breakpoint (large) {
-                    max-width: 80%;
-                }
-
-                .text {
-                    font-size: 1.5rem;
+                .more__main {
+                    display: flex;
+                    flex-direction: column;
     
                     @include utilities.breakpoint (medium) {
-                        max-width: 85%;
-                    }
-
-                    @include utilities.breakpoint (large) {
-                        font-size: 2rem;
+                        max-width: 90%;
+                        margin-inline: auto;
                     }
     
-                    &:last-child {
-                        
+                    @include utilities.breakpoint (large) {
+                        max-width: 80%;
+                    }
+    
+                    .text {
+                        font-size: 1.5rem;
+        
                         @include utilities.breakpoint (medium) {
-                            text-align: right;
-                            align-self: flex-end;
+                            max-width: 85%;
+                        }
+    
+                        @include utilities.breakpoint (large) {
+                            font-size: 2rem;
+                        }
+        
+                        &:last-child {
+                            
+                            @include utilities.breakpoint (medium) {
+                                text-align: right;
+                                align-self: flex-end;
+                            }
+                        }
+                    }
+        
+                    .image {
+                        width: 90%;
+                        margin: 4rem auto;
+    
+                        @include utilities.breakpoint (medium) {
+                            margin-block: 6rem;
+                        }
+        
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 1rem;
                         }
                     }
                 }
-    
-                .image {
-                    width: 90%;
-                    margin: 4rem auto;
-
-                    @include utilities.breakpoint (medium) {
-                        margin-block: 6rem;
-                    }
-    
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
-                    }
-                }
             }
+            
         }
 
         &#join {
@@ -276,59 +295,64 @@
 
             font-size: 1.5rem;
 
-            h3 {
-                font-family: var(--montserrat);
-                font-size: 2rem;
-
-                @include utilities.breakpoint (large) {
-                    font-size: 2.25rem;
-                }
-            }
-
-            .newsletter {
-
-                @include utilities.breakpoint (medium) {
-                    text-align: center;
-                    font-size: 2rem;
-                    text-transform: uppercase;
-                    max-width: 85%;
-                    margin-inline: auto;
-                }
-
-                @include utilities.breakpoint (large) {
-                    font-size: 2.5rem;
-                }
-
-
-                a {
-                    color: var(--pink);
-                }
-            }
-
-            .contact {
-                margin-top: 3rem;
-
-                @include utilities.breakpoint (medium) {
-                    max-width: 85%;
-                    margin: 4rem auto;
-
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
+            .join__content {
+                max-width: 1600px;
+                margin-inline: auto;
 
                 h3 {
-                    @include utilities.breakpoint (medium) {
-                        font-size: 2.5rem;
-                        text-align: center;
+                    font-family: var(--montserrat);
+                    font-size: 2rem;
+    
+                    @include utilities.breakpoint (large) {
+                        font-size: 2.25rem;
                     }
                 }
-
-                div {
-                    text-transform: uppercase;
-
+    
+                .newsletter {
+    
                     @include utilities.breakpoint (medium) {
-                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                        max-width: 85%;
+                        margin-inline: auto;
+                    }
+    
+                    @include utilities.breakpoint (large) {
+                        font-size: 2.5rem;
+                    }
+    
+    
+                    a {
+                        color: var(--pink);
+                    }
+                }
+    
+                .contact {
+                    margin-top: 3rem;
+    
+                    @include utilities.breakpoint (medium) {
+                        max-width: 85%;
+                        margin: 4rem auto;
+    
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+    
+                    h3 {
+                        @include utilities.breakpoint (medium) {
+                            font-size: 2.5rem;
+                            text-align: center;
+                        }
+                    }
+    
+                    div {
+                        text-transform: uppercase;
+    
+                        @include utilities.breakpoint (medium) {
+                            margin-top: 2rem;
+                        }
                     }
                 }
             }

@@ -2,6 +2,9 @@
 
 #products {
 
+    transform: scale(.8);
+    animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
     // The hero section
     #hero {
         display: flex;
@@ -35,9 +38,9 @@
 
     #categories {
 
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        // display: flex;
+        // align-items: center;
+        // flex-direction: column;
         // gap: 4rem;
 
         // The sections containing the products
@@ -56,6 +59,7 @@
 
             .category-main-content {
                 max-width: 1600px;
+                margin-inline: auto;
             }
 
             &:nth-child(1) {
@@ -230,6 +234,7 @@
                                 color: var(--black2);
                                 padding: .5rem 1rem;
                                 border-radius: .625rem;
+                                cursor: pointer;
 
                                 &:nth-child(1) {
                                     background-color: var(--white);

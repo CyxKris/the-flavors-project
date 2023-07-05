@@ -1,43 +1,44 @@
 
 <!-- The Header -->
-<header id="header" ng-include="'src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
+<header id="header" ng-include="'/src/components/header.html'" ng-controller="headerCtrl" class="flex"></header>
 
 <!-- The Cart -->
-<div ng-include="'src/components/cart.html'" class="offcanvas offcanvas-start" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false" ng-controller="productCtrl"></div>
+<div ng-include="'/src/components/cart.html'" class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel" data-bs-scroll="false" ng-controller="productCtrl"></div>
 
 <!-- The Main Content of The Page -->
 <main id="home" ng-controller="homeCtrl">
   <section id="hero">
-    <h1>the only spices you need.</h1>
-
-    <article class="slider" ng-include="'src/components/home-slider.html'"></article>
+    <div class="hero__content">
+      <h1>the only spices you need.</h1>
+      <article id="image-slider" class="slider" ng-include="'/src/components/home-slider.html'"></article>
+    </div>
   </section>
   
   <!-- The About Section -->
   <section id="about">
-    <h2>Get to know more about us</h2>
-    <div class="achievements">
-      <div class="achievement">
-        <h3 class="achievement__heading">Award-winning Flavors</h3>
-        <img class="achievement__image" src="src/images/onion.svg" alt="A simple onion">
-        <div class="achievement__content">
-          Our commitment to excellence has been recognized with multiple awards and accolades in the culinary industry. We take pride in the recognition of our dedication to crafting exceptional spices that elevate the dining experience.
+    <div class="about__content">
+      <h2>Get to know more about us</h2>
+      <div class="achievements">
+        <div class="achievement">
+          <h3 class="achievement__heading">Award-winning Flavors</h3>
+          <img class="achievement__image" src="/src/images/onion.svg" alt="A simple onion">
+          <div class="achievement__content">
+            Our commitment to excellence has been recognized with multiple awards and accolades in the culinary industry. We take pride in the recognition of our dedication to crafting exceptional spices that elevate the dining experience.
+          </div>
         </div>
-      </div>
-
-      <div class="achievement">
-        <h3 class="achievement__heading">Trusted by Chefs and Home Cooks</h3>
-        <img class="achievement__image" src="src/images/leaf.svg" alt="A simple leaf">
-        <div class="achievement__content">
-          Flavors spices have gained the trust of renowned chefs and home cooks alike. Our products are preferred by culinary professionals for their quality, versatility, and ability to enhance flavors in a wide range of dishes.
+        <div class="achievement">
+          <h3 class="achievement__heading">Trusted by Chefs and Home Cooks</h3>
+          <img class="achievement__image" src="/src/images/leaf.svg" alt="A simple leaf">
+          <div class="achievement__content">
+            Flavors spices have gained the trust of renowned chefs and home cooks alike. Our products are preferred by culinary professionals for their quality, versatility, and ability to enhance flavors in a wide range of dishes.
+          </div>
         </div>
-      </div>
-
-      <div class="achievement">
-        <h3 class="achievement__heading">Sustainable Sourcing Practices</h3>
-        <img class="achievement__image" src="src/images/potato.svg" alt="A simple potato">
-        <div class="achievement__content">
-          We are proud to have established sustainable sourcing practices that prioritize ethical considerations and support local farmers and suppliers. By choosing Flavors, you contribute to a more sustainable and responsible food ecosystem.
+        <div class="achievement">
+          <h3 class="achievement__heading">Sustainable Sourcing Practices</h3>
+          <img class="achievement__image" src="/src/images/potato.svg" alt="A simple potato">
+          <div class="achievement__content">
+            We are proud to have established sustainable sourcing practices that prioritize ethical considerations and support local farmers and suppliers. By choosing Flavors, you contribute to a more sustainable and responsible food ecosystem.
+          </div>
         </div>
       </div>
     </div>
@@ -45,27 +46,27 @@
 
   <!-- More About Information -->
   <section id="more">
-    <h2>Discover endless culinary possibilities.</h2>
-
     <div class="more__content">
-      <img class="more__image" src="src/images/leaf-alone.svg" alt="A simple leaf">
-      <p>
-        With our versatile range of spices, you can unlock your culinary creativity and explore new taste dimensions. From classic flavor profiles to bold and innovative blends, our spices empower you to infuse your dishes with exciting and delicious twists.
-      </p>
+      <h2>Discover endless culinary possibilities.</h2>
+      <div class="more__info">
+        <img class="more__image" src="/src/images/leaf-alone.svg" alt="A simple leaf">
+        <p>
+          With our versatile range of spices, you can unlock your culinary creativity and explore new taste dimensions. From classic flavor profiles to bold and innovative blends, our spices empower you to infuse your dishes with exciting and delicious twists.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- The Best-Sellers Section -->
   <section id="best">
-    <h2>our best selling products.</h2>
-    <div class="best__products">
-      <best-product name="bestProducts[0].name" image="bestProducts[0].image" blob="bestProducts[0].blob" rating="bestProducts[0].rating" link="bestProducts[0].link"></best-product>
-
-      <best-product name="bestProducts[1].name" image="bestProducts[1].image" blob="bestProducts[1].blob" rating="bestProducts[1].rating" link="bestProducts[1].link"></best-product>
-
-      <best-product name="bestProducts[2].name" image="bestProducts[2].image" blob="bestProducts[2].blob" rating="bestProducts[2].rating" link="bestProducts[2].link"></best-product>
-
-      <best-product name="bestProducts[3].name" image="bestProducts[3].image" blob="bestProducts[3].blob" rating="bestProducts[3].rating" link="bestProducts[3].link"></best-product>
+    <div class="best__content">
+      <h2>our best selling products.</h2>
+      <div class="best__products">
+        <best-product name="bestProducts[0].name" image="bestProducts[0].image" blob="bestProducts[0].blob" rating="bestProducts[0].rating" link="bestProducts[0].link"></best-product>
+        <best-product name="bestProducts[1].name" image="bestProducts[1].image" blob="bestProducts[1].blob" rating="bestProducts[1].rating" link="bestProducts[1].link"></best-product>
+        <best-product name="bestProducts[2].name" image="bestProducts[2].image" blob="bestProducts[2].blob" rating="bestProducts[2].rating" link="bestProducts[2].link"></best-product>
+        <best-product name="bestProducts[3].name" image="bestProducts[3].image" blob="bestProducts[3].blob" rating="bestProducts[3].rating" link="bestProducts[3].link"></best-product>
+      </div>
     </div>
   </section>
 
@@ -78,89 +79,82 @@
 
   <!-- The Testimonials Section -->
   <section id="testimonials">
-    <h2>what people are saying about us.</h2>
-
-    <!-- The Slider -->
-    <div id="testimonialContent" class="carousel slide carousel-dark">
-
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-
-        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
-
-        <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="testimonials__content">
+      <h2>what people are saying about us.</h2>
+      <!-- The Slider -->
+      <div id="testimonialContent" class="carousel slide carousel-dark">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialContent" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- The main content -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="main-content">
+              <p class="review" ng-bind="testimonials[0].review"></p>
+              <p class="name" ng-bind="testimonials[0].name"></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="main-content">
+              <p class="review" ng-bind="testimonials[1].review"></p>
+              <p class="name" ng-bind="testimonials[1].name"></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="main-content">
+              <p class="review" ng-bind="testimonials[2].review"></p>
+              <p class="name" ng-bind="testimonials[2].name"></p>
+            </div>
+          </div>
+        </div>
+        <!-- The quote image -->
+        <img src="src/images/quote.svg" alt="Quote Marks" class="quote-image">
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialContent" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialContent" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <!-- The main content -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="main-content">
-            <p class="review" ng-bind="testimonials[0].review"></p>
-
-            <p class="name" ng-bind="testimonials[0].name"></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="main-content">
-            <p class="review" ng-bind="testimonials[1].review"></p>
-            <p class="name" ng-bind="testimonials[1].name"></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="main-content">
-            <p class="review" ng-bind="testimonials[2].review"></p>
-            <p class="name" ng-bind="testimonials[2].name"></p>
-          </div>
-        </div>
-      </div>
-      <!-- The quote image -->
-      <img src="src/images/quote.svg" alt="Quote Marks" class="quote-image">
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialContent" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialContent" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </section>
 
   <!-- The New Arrivals Section -->
   <section id="new-arrivals">
-    <h2>what’s new at flavors.</h2>
-
-    <div class="new-arrivals">
-      <div class="new-arrivals__content">
-        we’re thrilled to introduce our brand new category, “unique and signature blends” to the flavors collection.
-      </div>
-
-      <div class="new-arrivals__image">
-        <img src="src/images/products/unique-&-signature-box.webp" alt="Unique & Signature Blends">
-      </div>
-
-      <div class="new-arrivals__content">
-        be among the first to discover these new spice blends and experience the magic they bring to your dishes.
+    <div class="new-arrivals__content">
+      <h2>what’s new at flavors.</h2>
+      <div class="new-arrivals">
+        <div class="new-arrivals__content">
+          we’re thrilled to introduce our brand new category, “unique and signature blends” to the flavors collection.
+        </div>
+        <div class="new-arrivals__image">
+          <img src="/src/images/products/unique-&-signature-box.webp" alt="Unique & Signature Blends">
+        </div>
+        <div class="new-arrivals__content">
+          be among the first to discover these new spice blends and experience the magic they bring to your dishes.
+        </div>
       </div>
     </div>
   </section>
 
   <!-- The Newsletter -->
   <section id="news">
-    <h2>stay tuned as we continue to expand our collection.</h2>
+    <div class="news__content">
+      <h2>stay tuned as we continue to expand our collection.</h2>
 
-    <form>
-      <div class="email-input">
-        <input type="email" name="email" id="email" placeholder="email">
-        <button type="submit">
-          <img src="src/images/bx-chevron-right.svg" alt="Right arrow">
-        </button>
-      </div>
-    </form>
+      <form>
+        <div class="email-input">
+          <input type="email" name="email" id="email" placeholder="email">
+          <button type="submit">
+            <img src="/src/images/bx-chevron-right.svg" alt="Right arrow">
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
 </main>
 
@@ -168,4 +162,4 @@
 <div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="homeLinks"></div>
 
 <!-- The Footer -->
-<footer id="footer" ng-include="'src/components/footer.html'" ng-controller="footerCtrl"></footer>
+<footer id="footer" ng-include="'/src/components/footer.html'" ng-controller="footerCtrl"></footer>

@@ -46,6 +46,19 @@ header, .footer__content {
     margin-inline: auto;
 }
 
+// ?Animations
+
+// main.ng-enter.ng-enter-active,
+// section#hero.ng-enter.ng-enter-active {
+//     transform: scale(1);
+// }
+
+@keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+}
+
 
 /* The marquee animation */
 @keyframes marquee {

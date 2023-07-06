@@ -47,10 +47,12 @@
                 }
     
                 .slider {
-                    border: 2px solid var(--black1);
                     border-radius: 1rem;
                     width: 95%;
-                    // max-height: 500px;
+
+                    @include utilities.breakpoint (large) {
+                        width: 90%;
+                    }
     
                     .carousel-inner {
     

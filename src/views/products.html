@@ -30,7 +30,7 @@
               <div class="product__info">
                 <p class="name">{{category.category}} bundle</p>
                 <div class="buttons">
-                  <a href="">learn more</a>
+                  <a href="" data-bs-toggle="modal" data-bs-target="{{category.target}}">learn more</a>
                   <a href="">buy</a>
                 </div>
               </div>
@@ -120,6 +120,9 @@
   </section>
 </main>
 
+
+<!-- THE MODALS -->
+
 <!-- The Product Modal -->
 <!-- <div id="productPage" class="modal fade" ng-include="'/src/components/modals/pure.html'" ng-controller="productCtrl"></div> -->
 
@@ -156,10 +159,19 @@
 <!-- Aromatic Modal -->
 <div id="aromaticModal" class="modal fade" ng-include="'/src/components/modals/aromatic.html'" ng-controller="productCtrl"></div>
 
-<!-- <div id="pureModal" products-modal class="modal fade" selectedItem="products[0]"></div> -->
+<!-- The Bundles -->
+<!-- Basic Seasoning Modal -->
+<div id="basicModal" class="modal fade" ng-include="'/src/components/modals/basic.html'" ng-controller="productCtrl"></div>
+<!-- Blended Seasoning Modal -->
+<div id="blendedModal" class="modal fade" ng-include="'/src/components/modals/blended.html'" ng-controller="productCtrl"></div>
+<!-- Ethnic & International Flavors Modal -->
+<div id="ethnicModal" class="modal fade" ng-include="'/src/components/modals/ethnic.html'" ng-controller="productCtrl"></div>
+<!-- Unique & Signature Blends Modal -->
+<div id="uniqueModal" class="modal fade" ng-include="'/src/components/modals/unique.html'" ng-controller="productCtrl"></div>
+
 
 <!-- The Bottom Navigation -->
-<div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="productLinks"></div>
+<div id="bottom-navigation" bottom-navigation page="$route.current.activePage" links="productLinks2"></div>
 
 
 <!-- The Footer -->

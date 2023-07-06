@@ -5,9 +5,12 @@
         "target": "#basicModal",
         "description": "The Basic Seasoning category offers a selection of essential spices to enhance the flavor of your dishes. These high-quality seasonings are carefully sourced and curated for their taste and versatility.",
         "images": [
-            "src/images/products/basic-seasoning-box.webp",
-            "src/images/products/basic-seasoning-first-two.webp",
-            "src/images/products/basic-seasoning-second-two.webp"
+            "/src/images/products/basic-seasoning-box.webp",
+            "/src/images/products/basic-seasoning-first-two.webp",
+            "/src/images/products/basic-seasoning-second-two.webp",
+            "/src/images/products/basic-seasoning-box.jpg",
+            "/src/images/products/basic-seasoning-first-two.jpg",
+            "/src/images/products/basic-seasoning-second-two.jpg"
         ],
         "products": [
             {
@@ -82,9 +85,12 @@
         "target": "#blendedModal",
         "description": "The Blended Seasoning category offers a range of expertly crafted spice blends to elevate the taste of your dishes. These unique combinations of herbs and spices are designed to add depth and complexity to your culinary creations.",
         "images": [
-            "src/images/products/blended-seasoning-box.webp",
-            "src/images/products/blended-seasoning-first-two.webp",
-            "src/images/products/blended-seasoning-second-two.webp"
+            "/src/images/products/blended-seasoning-box.webp",
+            "/src/images/products/blended-seasoning-first-two.webp",
+            "/src/images/products/blended-seasoning-second-two.webp",
+            "/src/images/products/blended-seasoning-box.jpg",
+            "/src/images/products/blended-seasoning-first-two.jpg",
+            "/src/images/products/blended-seasoning-second-two.jpg"
         ],
         "products": [
             {
@@ -159,9 +165,12 @@
         "target": "#ethnicModal",
         "description": "The Ethnic and International Flavors category introduces a collection of spice blends inspired by cuisines from around the world. These unique blends bring the authentic tastes of different cultures to your kitchen, allowing you to explore a world of flavors.",
         "images": [
-            "src/images/products/ethnic-&-international-box.webp",
-            "src/images/products/ethnic-&-international-first-two.webp",
-            "src/images/products/ethnic-&-international-second-two.webp"
+            "/src/images/products/ethnic-&-international-box.webp",
+            "/src/images/products/ethnic-&-international-first-two.webp",
+            "/src/images/products/ethnic-&-international-second-two.webp",
+            "/src/images/products/ethnic-&-international-box.jpg",
+            "/src/images/products/ethnic-&-international-first-two.jpg",
+            "/src/images/products/ethnic-&-international-second-two.jpg"
         ],
         "products": [
             {
@@ -236,9 +245,12 @@
         "target": "#uniqueModal",
         "description": "The Unique and Signature Blends category presents a selection of specially crafted spice blends that bring a touch of magic to your culinary creations. These blends are meticulously curated and designed to add unique and unforgettable flavors to your dishes.",
         "images": [
-            "src/images/products/unique-&-signature-box.webp",
-            "src/images/products/unique-&-signature-first-two.webp",
-            "src/images/products/unique-&-signature-second-two.webp"
+            "/src/images/products/unique-&-signature-box.webp",
+            "/src/images/products/unique-&-signature-first-two.webp",
+            "/src/images/products/unique-&-signature-second-two.webp",
+            "/src/images/products/unique-&-signature-box.jpg",
+            "/src/images/products/unique-&-signature-first-two.jpg",
+            "/src/images/products/unique-&-signature-second-two.jpg"
         ],
         "products": [
             {

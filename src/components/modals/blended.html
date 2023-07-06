@@ -1,0 +1,62 @@
+
+
+
+<div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-scrollable">
+  <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title">Product Page</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- The body of the modal -->
+      <div class="modal-body">
+
+        <section class="modal-body__content">
+          <div class="product-intro">
+            <div class="product__heading">
+              <h3 ng-bind="categories[1].category"></h3>
+
+              <div class="category">
+                <p>Category:</p>
+                <p>Seasoning Bundle</p>
+              </div>
+            </div>
+        
+            <div class="product__image">
+              <img ng-src="{{categories[1].images[3]}}" alt="{{categories[1].category}} Image">
+        
+              <div class="product-buttons">
+                <button>add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <p id="thePlace"></p>
+        
+          <div class="product-info">
+            <div class="accordion accordion-flush" id="productInformation">
+              <!-- Description -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productDescription" aria-expanded="false" aria-controls="productDescription">
+                    Description
+                  </button>
+                </h2>
+                <div id="productDescription" class="accordion-collapse collapse" data-bs-parent="#productInformation">
+                  <div class="accordion-body" ng-bind="categories[1].description"></div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+  </div>
+</div>
+

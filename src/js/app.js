@@ -4,6 +4,7 @@ const myApp = angular.module("myApp", ["ngRoute", "ngAnimate"]);
 // ?The configuration for the website
 myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
+    // $locationProvider.html5Mode(true);
 
     // if (window.history && window.history.pushState) {
     //     $locationProvider.html5Mode({
@@ -17,6 +18,11 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     // }
 
     $routeProvider
+        .when('/', {
+            templateUrl: '/src/views/home.html',
+            controller: 'headerCtrl',
+            activePage: 'home'
+        })
         .when('/home', {
             templateUrl: '/src/views/home.html',
             controller: 'headerCtrl',
@@ -48,9 +54,36 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
 // ?The controller for the overall website
 myApp.controller(
     'mainCtrl',
-    ['$scope', function ($scope) {
+    ['$scope', '$document', function ($scope, $document) {
 
-        $scope.homeLinks = ['about', 'more', 'best', 'news'];
+        $scope.homeLinks = ['about', 'more', 'best', 'reviews', 'new', 'join'];
+
+        $scope.homeLinks2 = [
+            {
+                'name': 'about',
+                'url': '#home#about'
+            },
+            {
+                'name': 'more',
+                'url': '#home#more'
+            },
+            {
+                'name': 'best',
+                'url': '#/home#best'
+            },
+            {
+                'name': 'reviews',
+                'url': '#/home#testimonials'
+            },
+            {
+                'name': 'new',
+                'url': '#/home#new-arrivals'
+            },
+            {
+                'name': 'join',
+                'url': '#home#news'
+            }
+        ];
 
         $scope.productLinks = ['basic', 'blended', 'ethnic', 'unique'];
 
@@ -61,7 +94,7 @@ myApp.controller(
             },
             {
                 'name': 'blended',
-                'url': '#!/products#blended'
+                'url': '#/products#blended'
             },
             {
                 'name': 'ethnic',
@@ -73,26 +106,43 @@ myApp.controller(
             }
         ];
 
-        $scope.aboutLinks = ['intro', 'services', 'more'];
+        $scope.aboutLinks = ['who', 'what', 'mission', 'join'];
 
-        $scope.galleryLinks = ['people', 'spices', 'places'];
+        $scope.aboutLinks2 = [
+            {
+                'name': 'who',
+                'url': '#who'
+            },
+            {
+                'name': 'what',
+                'url': '#what'
+            },
+            {
+                'name': 'mission',
+                'url': '#more'
+            },
+            {
+                'name': 'join',
+                'url': '#join'
+            }
+        ];
 
-        // function performSmoothScroll(target) {
-        //     lenis.scrollTo(target);
-        // }
+        $scope.galleryLinks = ['spices', 'people'];
 
-        // $scope.scrollToLink = function (link, page) {
-        //     var target = '#!' + page + '#' + link;
-        //     console.log(target);
-        //     console.log(typeof target);
-        //     // lenis.scrollTo(target);
-        //     performSmoothScroll(target);
-        // };
+        $scope.galleryLinks2 = [
+            {
+                'name': 'spices',
+                'url': '#products'
+            },
+            {
+                'name': 'people',
+                'url': '#other'
+            }
+        ];
 
-        // $scope.scrollToHeader = function (page) {
-        //     var target = '#!' + page + '#header';
-        //     performSmoothScroll(target);
-        // };
+        const theStuff = document.querySelector('.counter');
+        console.log("🚀 ~ file: app.js:144 ~ theStuff:", theStuff)
+
 
     }]
 );
@@ -117,24 +167,6 @@ myApp.controller(
 );
 
 // ?The controller for the product page
-// myApp.controller(
-//     'productCtrl',
-//     ['$scope', '$http', function ($scope, $http) {
-
-//         Getting the products data
-//         $http.get('data/categories.json')
-//             .then(function (response) {
-//                 $scope.categories = response.data;
-//                 console.log($scope.categories[0].products);
-//             });
-        
-        
-//         $scope.openModal = function (id) {
-//             $scope.selectedItem = $scope.categories[0].products[id];
-//         };
-//     }]
-// );
-
 myApp.controller(
     'productCtrl',
     ['$scope', '$http', function ($scope, $http) {
@@ -192,14 +224,6 @@ myApp.controller(
     }]
 );
 
-// ?The controller for the cart
-// myApp.controller(
-//     'cartCtrl',
-//     ['$scope', function ($scope) {
-//         $scope.message = 'This is the cart';
-//     }]
-// );
-
 // ?The controller for the mobile navigation
 myApp.controller(
     'mobileCtrl',
@@ -209,6 +233,7 @@ myApp.controller(
 
         $scope.toggleMenu = function () {
             mobileNav.classList.toggle('show');
+            console.log("🚀 ~ file: app.js:233 ~ mobileNav:", mobileNav)
             body.classList.toggle('no-scroll');
             console.log('toggle menu is working');
         }

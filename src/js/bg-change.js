@@ -24,3 +24,5 @@ $(window).scroll(function () {
 $(function () {
     $('[data-toggle="popover"]').popover()
 })
+
+

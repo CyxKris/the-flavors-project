@@ -141,8 +141,6 @@ myApp.controller(
         ];
 
         const theStuff = document.querySelector('.counter');
-        console.log("🚀 ~ file: app.js:144 ~ theStuff:", theStuff)
-
 
     }]
 );
@@ -233,33 +231,11 @@ myApp.controller(
 
         $scope.toggleMenu = function () {
             mobileNav.classList.toggle('show');
-            console.log("🚀 ~ file: app.js:233 ~ mobileNav:", mobileNav)
             body.classList.toggle('no-scroll');
-            console.log('toggle menu is working');
         }
     }]
 );
 
-// ?The controller for the bottom navigation
-// myApp.controller(
-//     'bottomNavCtrl',
-//     ['$scope', '$http', function ($scope, $http) {
-
-//         // Getting the bottom navigation data
-//         $http.get('data/bottom-nav.json')
-//             .then(function (response) {
-//                 console.log("This is the response from the bottom navigation data");
-//                 console.log(response);
-//                 $scope.nav = response.data;
-//                 console.log($scope.nav);
-                
-                
-
-//                 $scope.homeLinks = $scope.nav[0].links;
-//                 console.log($scope.homeLinks);
-//             });
-//     }]
-// );
 
 // ?The controller for the footer
 myApp.controller(
@@ -347,11 +323,7 @@ myApp.directive(
             templateUrl: '/src/components/bottom-nav.html',
             scope: {
                 page: '=',
-                links: '='
             }
-            // link: function (scope, elem, attrs) {
-                
-            // }
         }
     }
 );

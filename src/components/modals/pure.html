@@ -33,13 +33,10 @@
               <img ng-src="{{products[0].mozjpeg_image}}" alt="{{products[0].name}} Image">
         
               <div class="product-buttons">
-                <button>add a review</button>
                 <button>add to cart</button>
               </div>
             </div>
           </div>
-
-          <p id="thePlace"></p>
         
           <div class="product-info">
             <div class="accordion accordion-flush" id="productInformation">
@@ -118,6 +115,15 @@
             </div>
           </div>
         </section>
+
+        <div id="reviewForm">
+          <form action="">
+            <input type="text" name="name" id="name" placeholder="Input your name">
+            <textarea name="reviewMessage" id="reviewMessage" placeholder="Input your review" cols="30" rows="10"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
 
       </div>
 

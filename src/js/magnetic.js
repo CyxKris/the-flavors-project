@@ -1,29 +1,26 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const smileImage = document.getElementById('smile-image');
-    console.log(smileImage);
 
-    smileImage.addEventListener(
-        'mousemove',
-        (e) => {
-            let x = e.offsetX;
-            let y = e.offsetY;
+var counterContainer = document.querySelector(".counter");
 
-            let boxWidth = smileImage.clientWidth;
-            let boxHeight = smileImage.clientHeight;
+const counter = document.getElementById('counter');
+console.log(counter);
 
-            let moveX = (x - boxWidth / 2);
-            let moveY = (y - boxHeight / 2);
+var resetButton = document.querySelector("#reset");
+var visitCount = localStorage.getItem("page_view");
 
-            smileImage.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
-        }
-    );
+// Check if page_view entry is present
+if (visitCount) {
+    visitCount = Number(visitCount) + 1;
+    localStorage.setItem("page_view", visitCount);
+} else {
+    visitCount = 1;
+    localStorage.setItem("page_view", 1);
+}
+counter.innerHTML = visitCount;
 
-    smileImage.addEventListener(
-        'mouseout',
-        (e) => {
-            smileImage.style.transform = ``;
-        }
-    );
-})
-
+// Adding onClick event listener
+resetButton.addEventListener("click", () => {
+    visitCount = 1;
+    localStorage.setItem("page_view", 1);
+    counterContainer.innerHTML = visitCount;
+});

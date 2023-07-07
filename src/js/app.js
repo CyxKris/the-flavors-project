@@ -185,6 +185,7 @@ myApp.controller(
     }]
 );
 
+// ?The controller for the product reviews
 myApp.controller(
     'reviewCtrl',
     ['$scope', '$http', function ($scope, $http) {

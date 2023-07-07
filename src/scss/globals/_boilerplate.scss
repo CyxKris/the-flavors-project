@@ -28,17 +28,13 @@
 
 html {
     scroll-behavior: smooth !important;
-    overflow-x: hidden;
 }
 
 body {
     background-color: var(--pastel-blue);
     font-family: var(--share-tech);
     transition: all .3s ease;
-
-    &.no-scroll {
-        overflow: hidden;
-    }
+    // overflow-x: hidden;
 }
 
 header, .footer__content {
@@ -78,24 +74,3 @@ header, .footer__content {
         transform: translateX(-50%);
     }
 }
-
-// Lenis Scroll
-// html.lenis {
-//     height: auto;
-// }
-
-// .lenis.lenis-smooth {
-//     scroll-behavior: auto;
-// }
-
-// .lenis.lenis-smooth [data-lenis-prevent] {
-//     overscroll-behavior: contain;
-// }
-
-// .lenis.lenis-stopped {
-//     overflow: hidden;
-// }
-
-// .lenis.lenis-scrolling iframe {
-//     pointer-events: none;
-// }

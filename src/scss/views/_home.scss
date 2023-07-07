@@ -526,6 +526,7 @@
         color: var(--white);
         font-size: 2.25rem;
         padding: 1.5rem 1rem;
+        overflow-x: clip;
 
         @include utilities.breakpoint (medium) {
             font-size: 3rem;

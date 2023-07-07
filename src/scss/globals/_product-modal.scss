@@ -166,6 +166,34 @@
                 }
             }
 
+            #reviewForm {
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    input, textarea {
+                        padding: .5rem 1rem;
+                        font-size: 1.5rem;
+                        border-inline: none;
+                        border-block: 2px solid var(--black2);
+                    }
+
+                    input {
+                        text-transform: capitalize;
+                    }
+
+                    button {
+                        background-color: var(--orange);
+                        font-size: 1.5rem;
+                        width: 30%;
+                        padding: 1rem 1.2rem;
+                        text-transform: uppercase;
+                        border: none;
+                        align-self: flex-end;
+                    }
+                }
+            }
+
         }
     }
 }

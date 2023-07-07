@@ -185,6 +185,35 @@ myApp.controller(
     }]
 );
 
+myApp.controller(
+    'reviewCtrl',
+    ['$scope', '$http', function ($scope, $http) {
+        // Getting the reviews data
+        $http
+            .get('/data/reviews.json')
+            .then(function (response) {
+                $scope.reviews = response.data;
+                console.log($scope.reviews);
+            });
+
+        $scope.postReview = function () {
+
+            const reviewData = {
+                'name': $scope.name,
+                'review': $scope.review
+            };
+
+            // Pushing the review data to the reviews array.
+            $scope.reviews.push(reviewData);
+            console.log($scope.reviews);
+
+            // Clearing the form
+            $scope.name = '';
+            $scope.review = '';
+        }
+    }]
+)
+
 // ?The controller for the header
 myApp.controller(
     'headerCtrl',

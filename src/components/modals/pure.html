@@ -114,16 +114,17 @@
         
             </div>
           </div>
+
+          <div id="reviewForm" ng-controller="reviewCtrl">
+            <form>
+              <input type="text" name="name" id="name" placeholder="Input your name" ng-model="name">
+              <textarea name="reviewMessage" id="reviewMessage" placeholder="Input your review" cols="30" rows="10" ng-model="review"></textarea>
+  
+              <button type="submit" ng-click="postReview()">Submit</button>
+            </form>
+          </div>
+
         </section>
-
-        <div id="reviewForm">
-          <form action="">
-            <input type="text" name="name" id="name" placeholder="Input your name">
-            <textarea name="reviewMessage" id="reviewMessage" placeholder="Input your review" cols="30" rows="10"></textarea>
-
-            <button type="submit">Submit</button>
-          </form>
-        </div>
 
       </div>
 

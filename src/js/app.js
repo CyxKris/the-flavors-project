@@ -19,32 +19,32 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
 
     $routeProvider
         .when('/', {
-            templateUrl: '/src/views/home.html',
+            templateUrl: './src/views/home.html',
             controller: 'headerCtrl',
             activePage: 'home'
         })
         .when('/home', {
-            templateUrl: '/src/views/home.html',
+            templateUrl: './src/views/home.html',
             controller: 'headerCtrl',
             activePage: 'home'
         })
         .when('/products', {
-            templateUrl: '/src/views/products.html',
+            templateUrl: './src/views/products.html',
             controller: 'headerCtrl',
             activePage: 'products'
         })
         .when('/about', {
-            templateUrl: '/src/views/about.html',
+            templateUrl: './src/views/about.html',
             controller: 'headerCtrl',
             activePage: 'about'
         })
         .when('/gallery', {
-            templateUrl: '/src/views/gallery.html',
+            templateUrl: './src/views/gallery.html',
             controller: 'headerCtrl',
             activePage: 'gallery'
         })
         .when('/sitemap', {
-            templateUrl: '/src/views/sitemap.html',
+            templateUrl: './src/views/sitemap.html',
             controller: 'mainCtrl',
             activePage: 'sitemap'
         })
@@ -151,13 +151,13 @@ myApp.controller(
     ['$scope', '$http', function ($scope, $http) {
 
         $http
-            .get('/data/best-products.json')
+            .get('./data/best-products.json')
             .then(function (response) {
                 $scope.bestProducts = response.data;
             });
         
         $http
-            .get('/data/testimonials.json')
+            .get('./data/testimonials.json')
             .then(function (response) {
                 $scope.testimonials = response.data;
             });
@@ -170,14 +170,14 @@ myApp.controller(
     ['$scope', '$http', function ($scope, $http) {
 
         // Getting the categories data
-        $http.get('/data/categories.json')
+        $http.get('./data/categories.json')
             .then(function (response) {
                 $scope.categories = response.data;
             });
         
         // Getting the product data
         $http
-            .get('/data/products.json')
+            .get('./data/products.json')
             .then(function (response) {
                 $scope.products = response.data;
             });
@@ -191,7 +191,7 @@ myApp.controller(
     ['$scope', '$http', function ($scope, $http) {
         // Getting the reviews data
         $http
-            .get('/data/reviews.json')
+            .get('./data/reviews.json')
             .then(function (response) {
                 $scope.reviews = response.data;
                 console.log($scope.reviews);
@@ -271,7 +271,7 @@ myApp.controller(
 myApp.controller(
     'footerCtrl',
     ['$scope', '$http', function ($scope, $http) {
-        $scope.footerLogo = '/src/images/flavors-logo-with-icon-white.svg';
+        $scope.footerLogo = './src/images/flavors-logo-with-icon-white.svg';
 
         // ?Getting user's location
         const getLocation = () => {
@@ -350,7 +350,7 @@ myApp.directive(
     function () {
         return {
             restrict: 'EA',
-            templateUrl: '/src/components/bottom-nav.html',
+            templateUrl: './src/components/bottom-nav.html',
             scope: {
                 page: '=',
             }
@@ -364,7 +364,7 @@ myApp.directive(
     function () {
         return {
             restrict: 'EA',
-            templateUrl: '/src/components/best-product.html',
+            templateUrl: './src/components/best-product.html',
             scope: {
                 name: '=',
                 image: '=',
@@ -382,7 +382,7 @@ myApp.directive(
     function () {
         return {
             restrict: 'EA',
-            templateUrl: '/src/components/product-modal.html',
+            templateUrl: './src/components/product-modal.html',
             scope: {
                 selectedItem: '='
             }
